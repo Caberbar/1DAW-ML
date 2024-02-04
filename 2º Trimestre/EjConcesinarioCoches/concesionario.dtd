@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DECLARACION DE ENTIDADES -->
+<!ENTITY % ddia "dia (1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)">
+<!ENTITY % dmes "mes (1|2|3|4|5|6|7|8|9|10|11|12)">
+<!ENTITY % daño "año (2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011|2012)">
+
+<!-- DECLARACION DE LA RAIZ -->
+<!ELEMENT concesionario (coche+,cliente*,comercial+,venta*)>
+
+<!-- DECLARACION DEL ELEMENTO COCHE -->
+<!ELEMENT coche (marca,modelo,motor,fechamatric)>
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT motor (#PCDATA)>
+<!ATTLIST coche matricula ID #REQUIRED>
+<!ATTLIST coche combustible (Diesel|Gasolina|Hibrido) "Diesel">
+<!ATTLIST coche puertas (3|5) "5">
+<!ATTLIST coche plazas (5|7) "5">
+<!ELEMENT fechamatric EMPTY>
+<!ATTLIST fechamatric %ddia; #REQUIRED>
+<!ATTLIST fechamatric %dmes; #REQUIRED>
+<!ATTLIST fechamatric %daño; #REQUIRED>
+
+<!-- DECLARACION DEL ELEMENTO CLIENTE -->
+<!ELEMENT cliente (nombrecli,direccioncli,tlfcli+,edad?,añoscarnet)>
+<!ELEMENT nombrecli (#PCDATA)>
+<!ELEMENT direccioncli (cp,poblacion,provincia,region)>
+<!ELEMENT tlfcli (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT añoscarnet (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT region (#PCDATA)>
+<!ATTLIST cliente dni ID #REQUIRED>
+
+<!-- DECLARACION DEL ELEMENTO COMERCIAL -->
+<!ELEMENT comercial (nombrecom,tlfcom,fechacontrat,ventas)>
+<!ELEMENT nombrecom (#PCDATA)>
+<!ELEMENT tlfcom (#PCDATA)>
+<!ELEMENT fechacontrat EMPTY>
+<!ATTLIST fechacontrat %ddia; #REQUIRED>
+<!ATTLIST fechacontrat %dmes; #REQUIRED>
+<!ATTLIST fechacontrat %daño; #REQUIRED>
+<!ATTLIST comercial tipocontrat (Practicas|Eventual|Indefinido) #REQUIRED>
+<!ELEMENT ventas (año,nventas)>
+<!ELEMENT año (#PCDATA)>
+<!ELEMENT nventas (#PCDATA)>
+<!ATTLIST comercial dni ID #REQUIRED>
+
+<!-- DECLARACION DEL ELEMENTO VENTA -->
+<!ELEMENT venta (fechaventa,importe)>
+<!ATTLIST venta idcliente IDREF #REQUIRED>
+<!ATTLIST venta idcomercial IDREF #REQUIRED>
+<!ATTLIST venta matcoche IDREF #REQUIRED>
+<!ELEMENT fechaventa EMPTY>
+<!ATTLIST fechaventa %ddia; #REQUIRED>
+<!ATTLIST fechaventa %dmes; #REQUIRED>
+<!ATTLIST fechaventa %daño; #REQUIRED>
+<!ELEMENT importe (cantidad)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ATTLIST cantidad tipopago (Financiado|Contado) "Financiado">
+

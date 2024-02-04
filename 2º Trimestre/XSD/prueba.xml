@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Clientes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="prueba.xsd">
+    <Cliente>
+        <IdCliente>1</IdCliente>
+        <Empresa>Defensa Personal Orient</Empresa>
+        <Contacto>Alfonso Papo</Contacto>
+        <Ciudad>Terrassa</Ciudad>
+        <Provincia>Barcelona</Provincia>
+    </Cliente>
+    <Cliente>
+        <IdCliente>2</IdCliente>
+        <Empresa>Mística y Salud S.A.</Empresa>
+        <Contacto>Ana Coreta</Contacto>
+        <Ciudad>Santander</Ciudad>
+        <Provincia>Santander</Provincia>
+    </Cliente>
+    <Cliente>
+        <IdCliente>3</IdCliente>
+        <Empresa>Paños Rias Bajas</Empresa>
+        <Contacto>Estela Marinera</Contacto>
+        <Ciudad>Vigo</Ciudad>
+        <Provincia>Pontevedra</Provincia>
+    </Cliente>
+
+    <asignatura id="a06" titulacion="c03">
+        <nombre>Didactica</nombre>
+        <creditos_teoricos>4</creditos_teoricos>
+        <creditos_practicos>3</creditos_practicos>
+        <trimestre>2</trimestre>
+    </asignatura>
+
+    <carrera idCarrera="c02">
+        <nombre_carrera>Dipl. Empresariales</nombre_carrera>
+        <plan>2001</plan>
+        <creditos>275</creditos>
+        <centro>Facultad de Ciencias Sociales</centro>
+    </carrera>
+
+    <carrera idCarrera="c03">
+        <nombre_carrera>Dipl. Relaciones Laborales</nombre_carrera>
+        <plan>2001</plan>
+        <creditos>280</creditos>
+        <centro>Facultad de Ciencias Sociales</centro>
+        <subdirector>Alfonso Martin Luque</subdirector>
+    </carrera>
+
+    <alumno idAlumno="e09" beca="si">
+        <apellido1>Rodriguez</apellido1>
+        <apellido2>Perez</apellido2>
+        <nombre>Mauricio Jesus</nombre>
+        <sexo>Hombre</sexo>
+        <estudios>
+            <carrera codigo="c03"/>
+            <asignaturas>
+                <asignatura codigo="a06"/>
+                <asignatura codigo="a06"/>
+                <asignatura codigo="a06"/>
+                <asignatura codigo="a06"/>
+            </asignaturas>
+            <proyecto>El Tejido Empresarial</proyecto>
+        </estudios>
+    </alumno>
+ 
+</Clientes>

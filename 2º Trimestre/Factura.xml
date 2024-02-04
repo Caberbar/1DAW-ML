@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE facturas [
+    <!ELEMENT facturas (factura+)>
+    <!ELEMENT factura (fechaemision,cliente)>
+    <!ELEMENT fechaemision (dia,mes,anno)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT anno (#PCDATA)>
+    <!ELEMENT cliente (nombre,apellido+,direccion,tel,pedido)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT direccion (calle,numero,cp,localidad,provincia)>
+    <!ELEMENT calle (#PCDATA)>
+    <!ELEMENT numero (#PCDATA)>
+    <!ELEMENT cp (#PCDATA)>
+    <!ELEMENT localidad (#PCDATA)>
+    <!ELEMENT provincia (#PCDATA)>
+    <!ELEMENT tel (#PCDATA)>
+    <!ELEMENT pedido (articulo+,descuento,iva,totalFactura,moneda)>
+    <!ELEMENT articulo (tipoArticulo,modelo,precio,cantidad,subtotal)>
+    <!ELEMENT tipoArticulo (#PCDATA)>
+    <!ELEMENT modelo (#PCDATA)>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT cantidad (#PCDATA)>
+    <!ELEMENT subtotal (#PCDATA)>
+    <!ELEMENT descuento (#PCDATA)>
+    <!ELEMENT iva (#PCDATA)>
+    <!ELEMENT totalFactura (#PCDATA)>
+    <!ELEMENT moneda (#PCDATA)>
+    <!ATTLIST factura codigofactura ID  #REQUIRED>
+    <!ATTLIST factura ncliente IDREF  #REQUIRED>
+    <!ATTLIST cliente dni ID  #REQUIRED>
+    <!ATTLIST articulo idArt ID #REQUIRED>
+]>
+
+<facturas>
+    <factura codigofactura="826" ncliente="9878">
+        <fechaemision>
+            <dia>21</dia>
+            <mes>12</mes>
+            <anno>2022</anno>
+        </fechaemision>
+        <cliente dni="14785236W">
+            <nombre>Santiago</nombre>
+            <apellido>Pallarés</apellido>
+            <apellido>Vicaria</apellido>
+            <direccion>
+                <calle>Los gatos</calle>
+                <numero>2</numero>
+                <cp>11660</cp>
+                <localidad>Barbate</localidad>
+                <provincia>Cádiz</provincia>
+            </direccion>
+            <tel>658482569</tel>
+            <pedido>
+                <articulo idArt="121">
+                    <tipoArticulo>Silla giratoria</tipoArticulo>
+                    <modelo>Damisela</modelo>
+                    <precio>45</precio>
+                    <cantidad>2</cantidad>
+                    <subtotal>90</subtotal>
+                </articulo>
+                <articulo idArt="9568">
+                    <tipoArticulo>Mesa escritorio</tipoArticulo>
+                    <modelo>ZuperJ</modelo>
+                    <precio>120</precio>
+                    <cantidad>1</cantidad>
+                    <subtotal>120</subtotal>
+                </articulo>
+                <articulo idArt="1158">
+                    <tipoArticulo>Lámpara mesa</tipoArticulo>
+                    <modelo>Emérito</modelo>
+                    <precio>80</precio>
+                    <cantidad>3</cantidad>
+                    <subtotal>240</subtotal>
+                </articulo>
+                <descuento>20%</descuento>
+                <iva>21%</iva>
+                <totalFactura>435,6</totalFactura>
+                <moneda>Euro</moneda>
+            </pedido>
+        </cliente>
+    </factura>
+</facturas>

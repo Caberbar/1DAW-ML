@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+    <xsi:element name="facturas">
+        <xsi:complexType>
+            <xsi:sequence>
+                <xsi:element name="factura">
+                    <xsi:complexType>
+                        <xsi:sequence>
+                            <xsi:element name="fechaemision">
+                                <xsi:complexType>
+                                    <xsi:sequence>
+                                        <xsi:element name="dia" />
+                                        <xsi:element name="mes" />
+                                        <xsi:element name="anno" />
+                                    </xsi:sequence>
+                                </xsi:complexType>
+                            </xsi:element>
+                            <xsi:element name="cliente">
+                                <xsi:complexType>
+                                    <xsi:sequence>
+                                        <xsi:element name="nombre" type="xsi:string"/>
+                                        <xsi:element name="apellido" type="xsi:string" minOccurs="1" maxOccurs="unbounded"/>
+                                        <xsi:element name="direccion">
+                                            <xsi:complexType>
+                                                <xsi:sequence>
+                                                    <xsi:element name="calle" type="xsi:string"></xsi:element>
+                                                    <xsi:element name="numero" type="xsi:string"></xsi:element>
+                                                    <xsi:element name="localidad" type="xsi:string"></xsi:element>
+                                                    <xsi:element name="provincia" type="xsi:string"></xsi:element>
+                                                </xsi:sequence>
+                                            </xsi:complexType>
+                                        </xsi:element>
+                                        <xsi:element name="telefono" type="xsi:string"></xsi:element>
+                                    </xsi:sequence>
+                                </xsi:complexType>
+                            </xsi:element>
+                            <xsi:element name="pedido">
+                                <xsi:complexType>
+                                    <xsi:sequence>
+                                        <xsi:element name="articulo">
+                                            <xsi:complexType>
+                                                <xsi:sequence>
+                                                    <xsi:element name="nombre" type="xsi:string"></xsi:element>
+                                                    <xsi:element name="precio" type="xsi:string"></xsi:element>
+                                                    <xsi:element name="cantidad" type="xsi:string"></xsi:element>
+                                                    <xsi:element name="subTotal" type="xsi:string"></xsi:element>
+                                                </xsi:sequence>
+                                            </xsi:complexType>
+                                        </xsi:element>
+                                        <xsi:element name="descuento" type="xsi:string"></xsi:element>
+                                        <xsi:element name="iva" type="xsi:string"></xsi:element>
+                                        <xsi:element name="totalFactura" type="xsi:string"></xsi:element>
+                                        <xsi:element name="moneda" type="xsi:string"></xsi:element>
+                                    </xsi:sequence>
+                                </xsi:complexType>
+                            </xsi:element>
+                        </xsi:sequence>
+                    </xsi:complexType>
+                </xsi:element>
+            </xsi:sequence>
+            <xsi:attribute name="codigofactura" type="xsi:string"></xsi:attribute>
+            <xsi:attribute name="ncliente" type="xsi:string"></xsi:attribute>                   
+        </xsi:complexType>
+    </xsi:element>
+</xsi:schema>

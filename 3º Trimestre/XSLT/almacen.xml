@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="almacen.xsl" type="text/xsl"?>
+<almacen>
+  <proveedor idprov="CIF-11546987-G" pais="España">
+    <nombreprov>URENDE</nombreprov>
+    <direccionprov pais="España">
+      <lugar>
+        <avenida>San Javier</avenida>
+      </lugar>
+      <numero>34</numero>
+      <cp>11251</cp>
+      <municipio provincia="Cádiz">Jerez de la Frontera</municipio>
+    </direccionprov>
+    <tlfprov>
+      <fijo prefijo="956" numero="136140"></fijo>
+      <fijo prefijo="956" numero="136017" />
+      <movil>664554768</movil>
+    </tlfprov>
+    <faxprov prefijo="956" numero="136141"></faxprov>
+  </proveedor>
+  <proveedor idprov="CIF-21345543-K">
+    <nombreprov>MEDIAMARKT</nombreprov>
+    <direccionprov pais="España">
+      <lugar>
+        <plaza>De la Republica</plaza>
+      </lugar>
+      <numero>122</numero>
+      <cp>20220</cp>
+      <municipio provincia="Málaga">Malaga</municipio>
+    </direccionprov>
+    <tlfprov>
+      <fijo prefijo="952" numero="100546" />
+      <movil>665773872</movil>
+      <movil>665734342</movil>
+    </tlfprov>
+    <faxprov prefijo="952" numero="122133"></faxprov>
+  </proveedor>
+  <producto idprod="P1005" idprov="CIF-11546987-G" categoriaprod="Pantallas">
+    <nombreprod>Monitor TFT 17" LG</nombreprod>
+    <pvpprod>75.25€</pvpprod>
+    <stockprod>25</stockprod>
+  </producto>
+  <producto idprod="P1010" idprov="CIF-21345543-K" categoriaprod="Impresoras">
+    <nombreprod>Impresora Laserjet HP 5200</nombreprod>
+    <pvpprod>115.70€</pvpprod>
+    <stockprod>7</stockprod>
+  </producto>
+  <producto idprod="P2105" idprov="CIF-21345543-K" categoriaprod="Programas">
+    <nombreprod>Panda Antivirus 2011</nombreprod>
+    <pvpprod>32.15€</pvpprod>
+    <stockprod>12</stockprod>
+  </producto>
+  <!--Tener en cuenta que los atributos de tipo ID tiene que ser nombres XML válidos, -->
+  <!--por lo que no pueden empezar por numeros, por ello anteponemos la palabra dni. -->
+  <cliente idcli="dni52297413-J">
+    <nombrecli>Agustín Fernández Sánchez</nombrecli>
+    <direccioncli pais="España">
+      <lugar>
+        <calle>Santo Tomás de Aquino</calle>
+      </lugar>
+      <numero>28</numero>
+      <cp>41251</cp>
+      <municipio provincia="Sevilla">Utrera</municipio>
+    </direccioncli>
+    <tlfcli>
+      <movil>667554654</movil>
+    </tlfcli>
+  </cliente>
+  <cliente idcli="dni520546676-H">
+    <nombrecli>Ana Rodríguez Lara</nombrecli>
+    <direccioncli pais="España">
+      <lugar>
+        <calle>Alfonso XIII</calle>
+      </lugar>
+      <numero>14</numero>
+      <cp>41200</cp>
+      <municipio>Sevilla</municipio>
+    </direccioncli>
+    <tlfcli>
+      <movil>665789876</movil>
+    </tlfcli>
+  </cliente>
+  <factura idfact="F.1003" idclifact="dni52297413-J">
+    <fechafact dia="22" mes="Mayo" año="2011" />
+    <lineafact idprodfact="P2105" cantidadfact="5" pu="32.15€" total="160.75€" />
+    <lineafact idprodfact="P1010" cantidadfact="1" pu="115.70€" total="115.70€" />
+    <subtotalfact>276.45€</subtotalfact>
+    <ivafact>49.76€</ivafact>
+    <importefact>326.21€</importefact>
+  </factura>
+  <pedido idped="PE1300" idcliped="dni520546676-H">
+    <fechaenvioped dia="07" mes="Mayo" año="2011" />
+    <lineaped idprodped="P1005" cantidadped="7" />
+    <lineaped idprodped="P1010" cantidadped="2" />
+    <lineaped idprodped="P2105" cantidadped="23" />
+    <fechaentregaped dia="15" mes="Mayo" año="2011" />
+  </pedido>
+</almacen>

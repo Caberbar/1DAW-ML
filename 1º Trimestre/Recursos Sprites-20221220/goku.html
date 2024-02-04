@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Goku</title>
+        <style>
+
+            #goku{
+                width:50px;
+                height:67px;
+                margin:auto; 
+                background:url("./goku2.png") repeat-x;
+                }
+
+                .gokuSprite {
+                    width: 50px;
+                    height: 67px;
+                    background:url("img/goku2.png");
+                    -webkit-animation: gokuSprite 3s steps(9) infinite;
+                    -moz-animation: gokuSprite 3s steps(9) infinite;
+                    -ms-animation: gokuSprite 3s steps(9) infinite;
+                    -o-animation: gokuSprite 3s steps(9) infinite;
+                    animation: gokuSprite 3s steps(9) infinite ;
+                    }
+                    @-webkit-keyframes gokuSprite{
+                    from{background-position:0px;}
+                    to{background-position: -450px;}
+                    }
+                    @-moz-keyframes gokuSprite{
+                    from{background-position:0px;}
+                    to{background-position:-450px;}
+                    }
+                    @-ms-keyframes gokuSprite{
+                    from{background-position:0px;}
+                    to{background-position:-450px;}
+                    }
+                    @-o-keyframes gokuSprite{
+                    from{background-position:0px;}
+                    to{background-position:-450px;}
+                    }
+                    @keyframes gokuSprite{
+                    from{background-position:0px;}
+                    to{background-position:-450px;}
+                }
+        </style>
+    </head>
+    <body>
+        
+        <div id="goku" class="gokuSprite"></div>
+
+    </body>
+</html>

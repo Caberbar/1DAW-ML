@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Clientes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Cliente.xsd">
+    <Cliente>
+        <IdCliente>1</IdCliente>
+        <Empresa>Defensa Personal Orient</Empresa>
+        <Contacto>Alfonso Papo</Contacto>
+        <Ciudad>Terrassa</Ciudad>
+        <Provincia>Barcelona</Provincia>
+    </Cliente>
+    <Cliente>
+        <IdCliente>2</IdCliente>
+        <Empresa>Mística y Salud S.A.</Empresa>
+        <Contacto>Ana Coreta</Contacto>
+        <Ciudad>Santander</Ciudad>
+        <Provincia>Santander</Provincia>
+    </Cliente>
+    <Cliente>
+        <IdCliente>3</IdCliente>
+        <Empresa>Paños Rias Bajas</Empresa>
+        <Contacto>Estela Marinera</Contacto>
+        <Ciudad>Vigo</Ciudad>
+        <Provincia>Pontevedra</Provincia>
+    </Cliente>
+</Clientes>

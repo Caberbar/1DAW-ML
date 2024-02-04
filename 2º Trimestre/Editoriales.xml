@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editoriales>
+    <editorial nombre="">
+        <direccion>
+            <calle>Segovia</calle>
+            <numero>13</numero>
+            <cp>18630</cp>
+            <municipio>Otura</municipio>
+            <provincia>Granada</provincia>
+        </direccion>
+        <email>anaya21@gmail.com</email>
+        <webpage>https://anaya.es</webpage>
+        <telefono>
+            <numero>657842168</numero>
+            <tipo>movil</tipo>
+        </telefono>
+        <RedesSociales>
+            <yt>anaya</yt>
+            <facebook>anayafb</facebook>
+            <instagram>anayaReal</instagram>
+            <tiktok>anaya</tiktok>
+            <twitter>anaya</twitter>
+        </RedesSociales>
+    </editorial>
+
+    <editoriales>
+        <editorial nombre="">
+            <direccion>
+                <calle>sm</calle>
+                <numero>8</numero>
+                <cp>18630</cp>
+                <municipio>Otura</municipio>
+                <provincia>Granada</provincia>
+            </direccion>
+            <email>sm5@gmail.com</email>
+            <webpage>https://sm.es</webpage>
+            <telefono>
+                <numero>957485126</numero>
+                <tipo>fijo</tipo>
+            </telefono>
+            <RedesSociales>
+                <yt>sm</yt>
+                <facebook>smfb</facebook>
+                <instagram>smReal</instagram>
+                <tiktok>sm</tiktok>
+                <twitter>sm</twitter>
+            </RedesSociales>
+        </editorial>
+    </editoriales>
+</editoriales>

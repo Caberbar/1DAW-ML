@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menus</title>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #menu  a{
+                background: teal; color: white;
+                text-decoration: none;
+                display: block;
+                padding: 1em;
+                border-radius: 15px;
+            }
+            #menu a:hover{
+                background: green;
+                color: #333;
+                border: 1px solid black;
+            }
+            #menu ul{
+                list-style-type: none;
+                margin: 0px;
+                padding: 0px;
+                direction: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                column-gap: 1em;
+            }
+            #menu li{
+                flex-grow: 1;
+                text-align: center;
+            }
+            #menu li ul{
+                display: none;
+                position: absolute;
+                min-width: 180px;
+
+            }
+            #menu li:hover > ul{
+                display: block;
+            }
+            #menu li ul li {
+                position: relative;
+                background: yellow;
+            }
+            #menu li ul li ul{
+                right: -180px;
+                top:0px
+            }
+        </style>
+    <body>
+       <div id="menu">
+            <ul>
+                <li><a href="#">Pag-1</a></li>
+                <li><a href="#">Pag-2</a></li>
+                <li><a href="#">Pag-3</a>
+                    <ul>
+                        <li><a href="#">Sub-pág</a></li>
+                        <li><a href="#">Sub-pág con otra</a>
+                            <ul>
+                                <li><a href="#">Sub pagina de una Sub pagina</a></li>
+                                <li><a href="#">Sub pagina de una Sub pagina</a></li>
+                                <li><a href="#">Sub pagina de una Sub pagina</a></li>
+                                <li><a href="#">Sub pagina de una Sub pagina</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Sub-pág</a></li>
+                        <li><a href="#">Sub-pág</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Pag-4</a></li>
+            </ul>
+       </div>
+       <a href="#">otro enlace</a>
+    </body>
+</html>

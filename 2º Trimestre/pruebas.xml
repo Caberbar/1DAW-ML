@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libro SYSTEM "./pruebas.dtd">
+
+<libro nombre="Historias de el Futuro">
+  <capitulo paginas="18">
+            <titulo>Me cago en tus Nikes</titulo>
+            <autor>Vanesa Narváez</autor>
+            <descripcion> 
+                    Disertación sobre la no conformidad ante una  situación 
+             </descripcion>
+    </capitulo>
+   <capitulo paginas="30">
+               <titulo>Una forma distinta de crecimiento personal</titulo>
+               <autor>Samuel Castellar</autor>
+               <descripcion>
+                       La violencia no es el camino, pero un bofetón a tiempo, 
+                       te pone a andar 
+               </descripcion>
+    </capitulo>
+    <capitulo paginas="8">
+               <titulo>Tirititi</titulo>
+               <autor>Santiago Tallón</autor>
+               <descripcion>
+                       Manual de cómo empatizar en el ambiente laboral
+               </descripcion>
+     </capitulo>
+     <capitulo paginas="40">
+               <titulo>Apatrullando la ciudad</titulo>
+               <autor>Antonio Díaz</autor>
+               <descripcion>
+                      Tutorial sobre vigilancia policial en la zona norte 
+                      de  Granada a lomos de una chopped 
+                </descripcion>
+      </capitulo>
+</libro>

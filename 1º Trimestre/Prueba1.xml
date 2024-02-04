@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- esto es un comentario -->
+<pedido>
+    <cliente>
+        <nombre> Juan </nombre>
+        <apellidos> Delgado Martinez</apellidos>
+    </cliente>
+    <articulo>
+        <descripcion> Bicicleta </descripcion>
+        <codigo> A2023 </codigo>
+    </articulo>
+    <direccion>
+        <calle> Barco </calle>
+        <numero> 9 </numero>
+        <piso> tercer </piso>
+        <letra> A </letra>
+    </direccion>
+    <fecha dia="19" mes="5" año="2000"></fecha>
+</pedido>

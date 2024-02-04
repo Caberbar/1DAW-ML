@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ligas SYSTEM "./liga.dtd">
+
+<ligas>
+    <liga temporada="2011/2012" categoriaFutbol="Primera_Division">
+        <jugadores>
+            <jugador id_jugador="JUG_77969117Z">
+                <nombre>Cristiano </nombre>
+                <apellidos>Ronaldo</apellidos>
+                <fechanacimiento dia="05" mes="Febrero" ano="1985" />
+                <alias>CR7</alias>
+                <alias>El bicho</alias>
+                <nacionalidad lugar="Extranjera" />
+                <demarcacion posicion="Delantero" />
+            </jugador>
+            <jugador id_jugador="JUG_35338804V">
+                <nombre>Lionel Andrés Messi</nombre>
+                <apellidos>Cuccittini</apellidos>
+                <fechanacimiento dia="24" mes="Junio" ano="1987" />
+                <alias>La pulga</alias>
+                <nacionalidad lugar="Extranjera" />
+                <demarcacion posicion="Delantero" />
+            </jugador>
+            <jugador id_jugador="JUG_29694820A">
+                <nombre>Neymar</nombre>
+                <apellidos>da Silva Santor Júnior</apellidos>
+                <fechanacimiento dia="05" mes="Febrero" ano="1992" />
+                <alias>Ney</alias>
+                <nacionalidad lugar="Extranjera" />
+                <demarcacion posicion="Delantero" />
+            </jugador>
+            <jugador id_jugador="JUG_54721582M">
+                <nombre>Eden</nombre>
+                <apellidos>Hazard</apellidos>
+                <fechanacimiento dia="07" mes="Enero" ano="1991" />
+                <alias>El duque</alias>
+                <nacionalidad lugar="Extranjera" />
+                <demarcacion posicion="Delantero" />
+            </jugador>
+            <jugador id_jugador="JUG_36596186N">
+                <nombre>Kevin</nombre>
+                <apellidos>De Bruyne</apellidos>
+                <fechanacimiento dia="28" mes="Junio" ano="1991" />
+                <alias>The Prince</alias>
+                <nacionalidad lugar="Extranjera" />
+                <demarcacion posicion="Centro" />
+            </jugador>
+            <jugador id_jugador="JUG_90585572A">
+                <nombre>Robert</nombre>
+                <apellidos>Lewandowski</apellidos>
+                <fechanacimiento dia="21" mes="Agosto" ano="1988" />
+                <alias>Lewy</alias>
+                <alias>Mr. Lewangoalski</alias>
+                <nacionalidad lugar="Extranjera" />
+                <demarcacion posicion="Delantero" />
+            </jugador>
+            <jugador id_jugador="JUG_93938518D">
+                <nombre>Antoine</nombre>
+                <apellidos>Griezmann</apellidos>
+                <fechanacimiento dia="21" mes="Marzo" ano="1991" />
+                <alias>Principito</alias>
+                <alias>Grizi</alias>
+                <alias>Grizou</alias>
+                <nacionalidad lugar="Extranjera" />
+                <demarcacion posicion="Delantero" />
+            </jugador>
+            <jugador id_jugador="JUG_47238818S">
+                <nombre>Sergio</nombre>
+                <apellidos>Ramos García</apellidos>
+                <fechanacimiento dia="30" mes="Marzo" ano="1986" />
+                <alias>Sergi</alias>
+                <nacionalidad lugar="Española" />
+                <demarcacion posicion="Defensa" />
+            </jugador>
+            <jugador id_jugador="JUG_02985953R">
+                <nombre>Paulo</nombre>
+                <apellidos>Exequiel Dybala</apellidos>
+                <fechanacimiento dia="15" mes="Noviembre" ano="1993" />
+                <alias>La joya</alias>
+                <nacionalidad lugar="Extranjera" />
+                <demarcacion posicion="Delantero" />
+            </jugador>
+            <jugador id_jugador="JUG_34462353G">
+                <nombre>Jan</nombre>
+                <apellidos>Oblak</apellidos>
+                <fechanacimiento dia="07" mes="Enero" ano="1993" />
+                <alias>San Oblak</alias>
+                <nacionalidad lugar="Extranjera" />
+                <demarcacion posicion="Portero" />
+            </jugador>
+            <jugador id_jugador="JUG_49861543G">
+                <nombre>Hugo Hadrien</nombre>
+                <apellidos>Dominique Loris</apellidos>
+                <fechanacimiento dia="26" mes="Diciembre" ano="1986" />
+                <alias>Lloris</alias>
+                <nacionalidad lugar="Extranjera" />
+                <demarcacion posicion="Portero" />
+            </jugador>
+            <jugador id_jugador="JUG_35289935T">
+                <nombre>Pablo</nombre>
+                <apellidos>Martín Páez Gavira</apellidos>
+                <fechanacimiento dia="05" mes="Agosto" ano="2004" />
+                <alias>Gavi</alias>
+                <nacionalidad lugar="Española" />
+                <demarcacion posicion="Centro" />
+            </jugador>
+        </jugadores>
+        <entrenadores>
+            <entrenador id_entrenador="ENT_93279854L">
+                <nombre>Josep</nombre>
+                <apellidos>Guardiola i Sala</apellidos>
+                <fechanacimiento dia="18" mes="Enero" ano="1971" />
+                <alias>El filósofo</alias>
+                <alias>pep</alias>
+                <alias>El Noi de Santpedor</alias>
+                <nacionalidad lugar="Española" />
+                <titulos>32</titulos>
+            </entrenador>
+            <entrenador id_entrenador="ENT_41456142E">
+                <nombre>Zinédine </nombre>
+                <apellidos>Yazid Zidane</apellidos>
+                <fechanacimiento dia="23" mes="Junio" ano="1972" />
+                <alias>Zizou</alias>
+                <nacionalidad lugar="Extranjera" />
+                <titulos>11</titulos>
+            </entrenador>
+            <entrenador id_entrenador="ENT_31392049Q">
+                <nombre>José Mário</nombre>
+                <apellidos>Benítez Maudes</apellidos>
+                <fechanacimiento dia="16" mes="Abril" ano="1960" />
+                <alias>The Special One</alias>
+                <nacionalidad lugar="Extranjera" />
+                <titulos>25</titulos>
+            </entrenador>
+            <entrenador id_entrenador="ENT_78360882C">
+                <nombre>Rafael </nombre>
+                <apellidos>Martín Páez Gavira</apellidos>
+                <fechanacimiento dia="05" mes="Agosto" ano="2004" />
+                <alias>Rafa</alias>
+                <nacionalidad lugar="Española" />
+                <titulos>15</titulos>
+            </entrenador>
+        </entrenadores>
+        <arbitros>
+            <arbitro id_arbitro="ARB_98636272J">
+                <nombre>Pierluigi</nombre>
+                <apellidos>Collina</apellidos>
+                <alias>Pierluigi</alias>
+                <nacionalidad lugar="Extranjera"/>
+            </arbitro>
+            <arbitro id_arbitro="ARB_65364814X">
+                <nombre>Markus</nombre>
+                <apellidos>Merk</apellidos>
+                <alias>Markus</alias>
+                <nacionalidad lugar="Extranjera"/>
+            </arbitro>
+            <arbitro id_arbitro="ARB_54483285B">
+                <nombre>Jesús</nombre>
+                <apellidos>Gil Manzano</apellidos>
+                <alias>Jesús</alias>
+                <nacionalidad lugar="Española"/>
+            </arbitro>
+            <arbitro id_arbitro="ARB_40020115T">
+                <nombre>Horacio</nombre>
+                <apellidos>Marcelo Elizondo</apellidos>
+                <alias>Chino</alias>
+                <nacionalidad lugar="Extranjera"/>
+            </arbitro>
+        </arbitros>
+        <estadios>
+            <estadio id_estadio="EST_785">
+                <nombre>Santiago Bernabéu</nombre>
+                <ubicacion>España</ubicacion>
+                <aforo>81 044</aforo>
+            </estadio>
+            <estadio id_estadio="EST_784">
+                <nombre>Old Trafford</nombre>
+                <ubicacion>Reino Unido</ubicacion>
+                <aforo>76 000</aforo>
+            </estadio>
+            <estadio id_estadio="EST_934">
+                <nombre>Spotify Camp Nou</nombre>
+                <ubicacion>España</ubicacion>
+                <aforo>99 354</aforo>
+            </estadio>
+            <estadio id_estadio="EST_145">
+                <nombre>Allianz Arena</nombre>
+                <ubicacion>Alemania</ubicacion>
+                <aforo>75 024</aforo>
+            </estadio>
+        </estadios>
+        <equipos>
+            <equipo id_equipo="EQUI_147">
+                <nombre>Real Madrid Club de Fútbol</nombre>
+                <fechadeconstitucion dia="06" mes="Marzo" ano="1902" />
+                <categoria categoriaFutbol="Primera_Division"/>
+                <entrenador_equi id_entrenador="ENT_93279854L"/>
+                <jugadores_equi>
+                    <jugador_equi id_jugador="JUG_77969117Z"/>
+                    <jugador_equi id_jugador="JUG_35338804V"/>
+                    <jugador_equi id_jugador="JUG_29694820A"/>
+                </jugadores_equi>
+                <estadio_equi id_estadio="EST_785"/>
+            </equipo>
+            <equipo id_equipo="EQUI_185">
+                <nombre>Manchester United Football Club</nombre>
+                <fechadeconstitucion dia="05" mes="Marzo" ano="1878" />
+                <categoria categoriaFutbol="Primera_Division"/>
+                <entrenador_equi id_entrenador="ENT_41456142E"/>
+                <jugadores_equi>
+                    <jugador_equi id_jugador="JUG_54721582M"/>
+                    <jugador_equi id_jugador="JUG_36596186N"/>
+                    <jugador_equi id_jugador="JUG_90585572A"/>
+                </jugadores_equi>
+                <estadio_equi id_estadio="EST_784"/>
+            </equipo>
+            <equipo id_equipo="EQUI_263">
+                <nombre>Fußball-Club Bayern München e. V.</nombre>
+                <fechadeconstitucion dia="27" mes="Febrero" ano="1900" />
+                <categoria categoriaFutbol="Primera_Division"/>
+                <entrenador_equi id_entrenador="ENT_31392049Q"/>
+                <jugadores_equi>
+                    <jugador_equi id_jugador="JUG_93938518D"/>
+                    <jugador_equi id_jugador="JUG_47238818S"/>
+                    <jugador_equi id_jugador="JUG_02985953R"/>
+                </jugadores_equi>
+                <estadio_equi id_estadio="EST_145"/>
+            </equipo>
+            <equipo id_equipo="EQUI_845">
+                <nombre>	Fútbol Club Barcelona</nombre>
+                <fechadeconstitucion dia="29" mes="Noviembre" ano="1899" />
+                <categoria categoriaFutbol="Primera_Division"/>
+                <entrenador_equi id_entrenador="ENT_78360882C"/>
+                <jugadores_equi>
+                    <jugador_equi id_jugador="JUG_35289935T"/>
+                    <jugador_equi id_jugador="JUG_49861543G"/>
+                    <jugador_equi id_jugador="JUG_34462353G"/>
+                </jugadores_equi>
+                <estadio_equi id_estadio="EST_934"/>
+            </equipo>
+        </equipos>
+        <partidos>
+            <partido id_partido="PAR_547">
+                <equipos_par>
+                    <equipo_par id_equipo="EQUI_147"/>
+                    <equipo_par id_equipo="EQUI_185"/>
+                </equipos_par>
+                <estadio_par id_estadio="EST_785"/>
+                <arbitro_par id_arbitro="ARB_98636272J"/>
+            </partido>
+            <partido id_partido="PAR_478">
+                <equipos_par>
+                    <equipo_par id_equipo="EQUI_845"/>
+                    <equipo_par id_equipo="EQUI_147"/>
+                </equipos_par>
+                <estadio_par id_estadio="EST_784"/>
+                <arbitro_par id_arbitro="ARB_65364814X"/>
+            </partido>
+            <partido id_partido="PAR_236">
+                <equipos_par>
+                    <equipo_par id_equipo="EQUI_263"/>
+                    <equipo_par id_equipo="EQUI_185"/>
+                </equipos_par>
+                <estadio_par id_estadio="EST_934"/>
+                <arbitro_par id_arbitro="ARB_54483285B"/>
+            </partido>
+            <partido id_partido="PAR_297">
+                <equipos_par>
+                    <equipo_par id_equipo="EQUI_263"/>
+                    <equipo_par id_equipo="EQUI_845"/>
+                </equipos_par>
+                <estadio_par id_estadio="EST_145"/>
+                <arbitro_par id_arbitro="ARB_40020115T"/>
+            </partido>
+        </partidos>
+        <jornadas>
+            <jornada id_jornada="JOR_563">
+                <fechadejornada dia="24" mes="Enero" ano="2024"/>
+                <competicion nombre="Liga Española 2021/2022"/>
+                <partidos_jor>
+                    <partido_jor id_partido="PAR_547"/>
+                    <partido_jor id_partido="PAR_478"/>
+                </partidos_jor>
+                <emision nombre="Abierto"/>
+                <canales></canales>
+            </jornada>
+            <jornada id_jornada="JOR_347">
+                <fechadejornada dia="06" mes="Junio" ano="2023"/>
+                <competicion nombre="Liga Española 2021/2022"/>
+                <partidos_jor>
+                    <partido_jor id_partido="PAR_236"/>
+                    <partido_jor id_partido="PAR_478"/>
+                </partidos_jor>
+                <emision nombre="Codificado"/>
+                <canales></canales>
+            </jornada>
+            <jornada id_jornada="JOR_964">
+                <fechadejornada dia="18" mes="Marzo" ano="2023"/>
+                <competicion nombre="Liga Española 2021/2022"/>
+                <partidos_jor>
+                    <partido_jor id_partido="PAR_297"/>
+                    <partido_jor id_partido="PAR_547"/>
+                </partidos_jor>
+                <emision nombre="Abierto"/>
+                <canales></canales>
+            </jornada>
+        </jornadas>
+    </liga>
+</ligas>

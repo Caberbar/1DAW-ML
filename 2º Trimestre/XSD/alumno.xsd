@@ -1,0 +1,11 @@
+<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+    <xsi:element name="alumno">
+        <xsi:complexType>
+            <xsi:sequence>
+                <xsi:element name="nombre" type="xsi:string" minOccurs="1" maxOccurs="unbounded"/>
+                <xsi:element name="apellidos" type="xsi:string"/>
+                <xsi:element name="direccion" type="xsi:string"/>
+            </xsi:sequence>
+        </xsi:complexType>
+    </xsi:element>
+</xsi:schema>

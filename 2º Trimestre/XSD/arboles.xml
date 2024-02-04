@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arboles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="arboles.xsd">
+    <arbol nombreCientifico="Acer Monspesusularem" vegetacion="caducifolio">
+        <nombreComun>Arce de Montpellier</nombreComun>
+        <nombreComun>Arce menor</nombreComun>
+        <altura>
+            <min>6</min>
+            <max>10</max>
+            <unidad>metros</unidad>
+        </altura>
+        <formaYEstructura>
+            <copa>Esferica</copa>
+            <tronco>Recto con bifurcaciones</tronco>
+            <ramaje>Colgante</ramaje>
+        </formaYEstructura>
+        <color>
+            <primavera>
+                <haz>
+                    <hojasUnicas>Verde Brillante</hojasUnicas>
+                </haz>
+                <enves>
+                    <hojasUnicas>Blanquecino</hojasUnicas>
+                </enves>
+            </primavera>
+        </color>
+        <resistencia>
+            <tipo>Fuertes</tipo>
+            <grados>-15</grados>
+            <unidad>centigrados</unidad>
+        </resistencia>
+    </arbol>
+
+    <arbol nombreCientifico="Olea Europea" vegetacion="Perenne">
+        <nombreComun>Olivo</nombreComun>
+        <altura>
+            <min>8</min>
+            <max>15</max>
+            <unidad>metros</unidad>
+        </altura>
+        <formaYEstructura>
+            <copa>Irregular</copa>
+            <tronco>Irregular con bifurcaciones</tronco>
+            <ramaje>Colgante</ramaje>
+        </formaYEstructura>
+    </arbol>
+
+    <arbol nombreCientifico="Ramaje Tortuoso">
+        <color>
+            <primavera>
+                <haz>
+                    <hojasUnicas>Verde Oscuro</hojasUnicas>
+                </haz>
+                <enves>
+                    <hojasUnicas>Verde Plateado</hojasUnicas>
+                </enves>
+            </primavera>
+        </color>
+        <resistencia>
+            <tipo>Medias</tipo>
+            <grados>-10</grados>
+            <unidad>centigrados</unidad>
+        </resistencia>
+    </arbol>
+
+    <arbol nombreCientifico="Platanus Orientalis" vegetacion="caducifolio">
+        <nombreComun>Platano</nombreComun>
+        <altura>
+            <min>20</min>
+            <max>25</max>
+            <unidad>metros</unidad>
+        </altura>
+        <formaYEstructura>
+            <copa>Ovoidal</copa>
+            <tronco>Recto</tronco>
+            <ramaje>Expandido</ramaje>
+        </formaYEstructura>
+        <color>
+            <primavera>
+                <haz>
+                    <hojasJovenes>Verde medio</hojasJovenes>
+                </haz>
+                <enves>
+                    <hojasJovenes>verde claro</hojasJovenes>
+                </enves>
+            </primavera>
+            <otonio>
+                <haz>
+                    <hojasViejas>Ocre</hojasViejas>
+                </haz>
+                <enves>
+                    <hojasViejas>Ocre</hojasViejas>
+                </enves>
+            </otonio>
+        </color>
+        <resistencia>
+            <tipo>Fuertes</tipo>
+            <grados>-20</grados>
+            <unidad>centigrados</unidad>
+        </resistencia>
+    </arbol>
+
+    <arbol nombreCientifico="Quercus Ilex" vegetacion="Perenne">
+        <nombreComun>Encina</nombreComun>
+        <altura>
+            <media>25</media>
+            <unidad>metros</unidad>
+        </altura>
+        <formaYEstructura>
+            <copa>Esferica</copa>
+            <copa>Eliptica Irregular</copa>
+            <tronco>Recto</tronco>
+            <ramaje>Tortuoso</ramaje>
+        </formaYEstructura>
+        <color>
+            <primavera>
+                <haz>
+                    <hojasJovenes>Plateado</hojasJovenes>
+                    <hojasViejas>Verde Oscuro</hojasViejas>
+                </haz>
+                <enves>
+                    <hojasJovenes>Plateado</hojasJovenes>
+                    <hojasViejas>Plateado</hojasViejas>
+                </enves>
+            </primavera>
+        </color>
+        <resistencia>
+            <tipo>Fuertes</tipo>
+            <grados>-15</grados>
+            <unidad>centigrados</unidad>
+        </resistencia>
+    </arbol>
+</arboles>

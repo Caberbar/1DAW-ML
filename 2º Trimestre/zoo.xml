@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE zoo SYSTEM "./zoo.dtd">
+
+<zoo>
+    <nombre>Zoológico de la Ciudad</nombre>
+  
+    <ubicacion>Ciudad de México</ubicacion>
+  
+    <especie nombre="León">
+  
+      <nombre_comun>León</nombre_comun>
+  
+      <nombre_cientifico>Panthera leo</nombre_cientifico>
+  
+      <descripcion>
+  
+        El león es un mamífero carnívoro de la familia Felidae y una de las cinco especies del género Panthera. 
+  
+        Los machos son fáciles de reconocer por su melena y pueden pesar hasta 250 kg.
+  
+      </descripcion>
+  
+      <imagen url="https://leongrande.jpg" 
+  
+              descripcion="León descansando" />
+  
+      <habitat tipo="Sábana" />
+  
+      <alimentacion tipo="Carnívoro">
+  
+        <comida>Carne de animales de presa como cebras, antílopes y búfalos</comida>
+  
+      </alimentacion>
+  
+    </especie>
+  
+    <especie nombre="Jirafa">
+  
+      <nombre_comun>Jirafa</nombre_comun>
+  
+      <nombre_cientifico>Giraffa camelopardalis</nombre_cientifico>
+  
+      <descripcion>
+  
+        La jirafa es una especie de mamífero artiodáctilo de la familia Giraffidae propia de África. 
+  
+        Su cuello largo y sus patas largas y delgadas la hacen única en su especie.
+  
+      </descripcion>
+  
+      <imagen url="https://jirafalarga.jpg" 
+  
+              descripcion="Jirafa en el parque nacional Mikumi" />
+  
+      <habitat tipo="Sábana" />
+  
+      <alimentacion tipo="Herbívoro">
+  
+        <comida>Hoja de árboles y arbustos</comida>
+  
+      </alimentacion>
+  
+    </especie>
+  
+  </zoo>

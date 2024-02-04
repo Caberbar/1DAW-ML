@@ -1,0 +1,51 @@
+1.- Muestra el nombre de los bailes
+for $x in doc("C:\Users\DAW-B\Downloads\bailes.xml")/bailes
+return $x/baile/nombre/text()
+
+2.- Muestra el nombre y el precio de los bailes
+for $x in doc("C:\Users\DAW-B\Downloads\bailes.xml")/bailes/baile
+return data($x/nombre/text()) || data($x/precio/text())
+
+3.- Muestra el nombre y el precio de los bailes que valen mas de 40
+for $x in doc("C:\Users\DAW-B\Downloads\bailes.xml")/bailes/baile
+where $x/precio>40
+return data($x/nombre/text()) || data($x/precio/text())
+
+4.- Mostrar los bailes ordenados por nombre.
+for $x in doc("C:\Users\DAW-B\Downloads\bailes.xml")/bailes/baile
+order by $x/nombre
+return $x/nombre/text()
+
+5.- Mostrar los nombres de los bailes que contienen una a.
+for $x in doc("C:\Users\DAW-B\Downloads\bailes.xml")/bailes/baile
+where contains($x/nombre,"a")
+return $x/nombre/text()
+
+6.- Mostrar el nombre de los bailes donde el apellido del profesor sea Lozano.
+for $x in doc("C:\Users\DAW-B\Downloads\bailes.xml")/bailes/baile
+where contains($x/profesor,"Lozano")
+return $x/nombre/text()
+
+7.- Mostrar todos los bailes, excepto el 3 y 5.
+for $x in doc("C:\Users\DAW-B\Downloads\bailes.xml")/bailes/baile
+where $x/@id!=3 and $x/@id!=5
+return $x/nombre/text()
+
+8.- Mostrar profesores que den clases de bailes por una cuota mensual.
+for $x in doc("C:\Users\DAW-B\Downloads\bailes.xml")/bailes/baile
+where $x/precio/@cuota = "mensual"
+return $x/profesor/text()
+
+9.- Mostrar el nombre de los bailes de la sala 1, que se pague con euros y el precio sea menor a 35.
+for $x in doc("C:\Users\DAW-B\Downloads\bailes.xml")/bailes/baile
+where $x/sala = "1" and $x/precio/@moneda = "euro" and  $x/precio < 35
+return $x/nombre/text()
+
+----------
+
+1.- Extraer la ciudad de los proveedores (no debe aparecer la etiqueta) que tengan un estado mayor de 15.
+for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\datos.xml")/datos/proveedores/proveedor
+where $x/estado > 15
+return $x/ciudad/text()
+
+2.- 

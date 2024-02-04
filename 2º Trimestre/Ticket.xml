@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tickets [
+    <!ELEMENT tickets (ticket+)>
+    <!ELEMENT ticket (fecha,hora,precioTotal,formaPago,datosCorreo,datosCompra)>
+    <!ELEMENT fecha (dia,mes,anno)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT anno (#PCDATA)>
+    <!ELEMENT hora (#PCDATA)>
+    <!ELEMENT precioTotal (preciosinIVA,IVA,total)>
+    <!ELEMENT preciosinIVA (#PCDATA)>
+    <!ELEMENT IVA (#PCDATA)>
+    <!ELEMENT total (#PCDATA)>
+    <!ELEMENT formaPago (efectivo*,tarjeta*)>
+    <!ELEMENT efectivo (#PCDATA)>
+    <!ELEMENT tarjeta (#PCDATA)>
+    <!ELEMENT datosCorreo (nombre,Direccion,CIF,telefono)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT Direccion (calle,numero,localidad,provincia,cp)>
+    <!ELEMENT calle (#PCDATA)>
+    <!ELEMENT numero (#PCDATA)>
+    <!ELEMENT localidad (#PCDATA)>
+    <!ELEMENT provincia (#PCDATA)>
+    <!ELEMENT cp (#PCDATA)>
+    <!ELEMENT CIF (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+    <!ELEMENT datosCompra (linea+)>
+    <!ELEMENT linea (articulo,cantidad,precioUnidad,IVA,pvp)>
+    <!ELEMENT articulo (#PCDATA)>
+    <!ELEMENT cantidad (#PCDATA)>
+    <!ELEMENT precioUnidad (#PCDATA)>
+    <!ELEMENT pvp (#PCDATA)>
+
+    <!ATTLIST ticket codigoTicket CDATA #REQUIRED>    
+]>
+<tickets>
+    <ticket codigoTicket="">
+        <fecha>
+            <dia>30</dia>
+            <mes>3</mes>
+            <anno>2022</anno>
+        </fecha>
+        <hora></hora>
+        <precioTotal>
+            <preciosinIVA>25</preciosinIVA>
+            <IVA>21%</IVA>
+            <total>30,25</total>
+        </precioTotal>
+        <formaPago>
+            <efectivo></efectivo>
+        </formaPago>
+        <datosCorreo>
+            <nombre>Olga</nombre>
+            <Direccion>
+                <calle>Severo Ochoa</calle>
+                <numero>12</numero>
+                <localidad>Otura</localidad>
+                <provincia>Granada</provincia>
+                <cp>18630</cp>
+            </Direccion>
+            <CIF>A08957698</CIF>
+            <telefono>654789521</telefono>
+        </datosCorreo>
+        <datosCompra>
+            <linea>
+                <articulo>Peras</articulo>
+                <cantidad>2</cantidad>
+                <precioUnidad>5</precioUnidad>
+                <IVA>21%</IVA>
+                <pvp>10</pvp>
+            </linea>
+        </datosCompra>
+    </ticket>
+
+    <ticket codigoTicket="">
+        <fecha>
+            <dia>30</dia>
+            <mes>3</mes>
+            <anno>2022</anno>
+        </fecha>
+        <hora></hora>
+        <precioTotal>
+            <preciosinIVA>25</preciosinIVA>
+            <IVA>21%</IVA>
+            <total>30,25</total>
+        </precioTotal>
+        <formaPago>
+            <efectivo></efectivo>
+        </formaPago>
+        <datosCorreo>
+            <nombre>Olga</nombre>
+            <Direccion>
+                <calle>Lopez</calle>
+                <numero>4</numero>
+                <localidad>Armilla</localidad>
+                <provincia>Granada</provincia>
+                <cp>18100</cp>
+            </Direccion>
+            <CIF>A08957698</CIF>
+            <telefono>631478516</telefono>
+        </datosCorreo>
+        <datosCompra>
+            <linea>
+                <articulo>Jamón</articulo>
+                <cantidad>1</cantidad>
+                <precioUnidad>50</precioUnidad>
+                <IVA>21%</IVA>
+                <pvp>50</pvp>
+            </linea>
+        </datosCompra>
+    </ticket>
+
+</tickets>

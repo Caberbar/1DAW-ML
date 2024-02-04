@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT cine (pelicula*)>
+<!ELEMENT pelicula (sinopsis, reparto, imagen)>
+<!ATTLIST pelicula
+          titulo CDATA #REQUIRED
+          año CDATA #REQUIRED
+          director CDATA #REQUIRED
+          duracion CDATA #REQUIRED
+          genero CDATA #REQUIRED
+          idioma CDATA #REQUIRED>
+<!ELEMENT sinopsis (#PCDATA)>
+<!ELEMENT reparto (actor+)>
+<!ELEMENT actor EMPTY>
+<!ATTLIST actor
+          nombre CDATA #REQUIRED
+          papel CDATA #REQUIRED>
+<!ELEMENT imagen EMPTY>
+<!ATTLIST imagen
+          url CDATA #REQUIRED
+          descripcion CDATA #REQUIRED>

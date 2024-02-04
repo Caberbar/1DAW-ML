@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT zoo (nombre,ubicacion,especie+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ubicacion (#PCDATA)>
+<!ELEMENT especie (nombre_comun,nombre_cientifico,descripcion,imagen,habitat,alimentacion)>
+<!ATTLIST especie nombre CDATA #REQUIRED>
+<!ELEMENT nombre_comun (#PCDATA)>
+<!ELEMENT nombre_cientifico (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT imagen EMPTY>
+<!ATTLIST imagen url CDATA #REQUIRED>
+<!ATTLIST imagen descripcion CDATA #REQUIRED>
+<!ELEMENT habitat EMPTY>
+<!ATTLIST habitat tipo CDATA #REQUIRED>
+<!ELEMENT alimentacion (comida)>
+<!ATTLIST alimentacion tipo CDATA #REQUIRED>
+<!ELEMENT comida (#PCDATA)>

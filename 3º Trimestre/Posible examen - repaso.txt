@@ -1,0 +1,81 @@
+- Extraer el elemento nombre de elemento universidad
+//universidad/nombre/text()
+
+- Extraer el texto elemento pais de elemento universidad
+//universidad/pais/text()
+
+- Extraer el elemento nombre de las carreras
+//carrera/nombre/text()
+
+- Extraer el nombre de todos los alumnos
+//alumno/nombre/text()
+
+- Extraer el identificador de todas las carreas
+//carrera/@id
+
+- Extraer los datos de la carrera cuyo id es c01
+//carrera[@id = "c01"]
+
+- Extraer el centro donde se estudia la carrera cuyo id es c02
+//carrera[@id = "c02"]/centro/text()
+
+- Extraer el nombre de las carreras que tiene subdirector
+//subdirector/../nombre/text()
+
+- Extraer el nombre de los alumnos que estan haciendo un proyecto
+//proyecto/../../nombre/text()
+
+- El código de las carreras en las que algún alumno matriculado
+//alumno//carrera/@codigo
+//carrera[@id = //alumno/estudios/carrera/@codigo]/@id
+
+- Extrae los pellidos y nombre de los alumnos con beca
+//alumno[@beca = "si"]/nombre |
+//alumno[@beca = "si"]/apellido1 |
+//alumno[@beca = "si"]/apellido2
+
+- El código de la asignaturas que estudian mujeres
+//alumno[sexo = "Mujer"]//asignatura/@codigo/data()
+
+- Extraer los apellidos de los hombres
+//alumno[sexo = "Hombre"]/apellido1 |
+//alumno[sexo = "Hombre"]/apellido2
+
+- Extrae el nombre de la carrera que estudia Victor Manuel
+//carrera[@id = //alumno[nombre = "Victor Manuel"]//carrera/@codigo]/nombre
+
+- Extraer el primer apellido de los alumnos que estén matriculados en Ingenieria del Software
+//alumno[.//asignatura/@codigo = //asignaturas/asignatura[nombre = "Ingenieria del Software"]/@id]/apellido1
+
+- Extraer nombre de las carreras que estudian los alumnos matriculados en la asignatura Tecnologia de los Alimentos
+//carrera[@id = //alumno[.//asignatura/@codigo = //asignaturas/asignatura[nombre = "Tecnologia de los Alimentos"]/@id]//carrera/@codigo]/nombre
+
+- Nombre de los alumnos matriculados en asignaturas con 0 créditos prácticos y que estudien la carrera de I.T. Informática
+//alumno[.//asignatura/@codigo = //asignatura[creditos_practicos = 0]/@id][.//carrera/@codigo = //carrera[nombre = "I.T. Informatica"]/@id]/nombre
+
+- Nombre de los alumnos que estudian carreras cuyos planes son anteriores al 2002
+//alumno[.//carrera/@codigo = //carrera[plan < 2002]/@id]/nombre
+
+
+- Concatenar el texto Media de créditos prácticos, sacar la media de créditos prácticos
+concat ("Media de créditos prçacticos: ", avg(//asignatura/creditos_practicos/text()))
+
+- Seleccionar los nombres de los alumnos  que se hayan matriculado de 3 o más asignaturas
+
+- Seleccionar el nombre de aquellas asignaturas que tienen menos créditos prácticos que la media
+
+
+
+
+
+- Seleccionar el valor del atributo id de aquellos alumnos que se encuentren matriculados de la asignatura de código a09
+//alumno[.//asignatura/@codigo = "a09"]/@id/data()
+
+- Seleccionar el nombre de aquellas asignaturas que se imparten en la escuela de informática
+//asignatura[@titulacion = //carrera[.//centro = "Escuela de Informatica"]/@id]/nombre
+
+
+- Seleccionar el nombre de los alumnos que se encuentren matriculados en ofimatica
+//alumno[.//asignatura/@codigo = //asignatura[nombre = "Ofimatica"]/@id]/nombre
+
+- Seleccionar el nombre de aquellas asignaturas que pertenecen a la diplomatura de Relaciones laborales o a la licenciatura de humanidades o que se imparten en el segundo trimestre

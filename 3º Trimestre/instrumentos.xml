@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<instrumentos_musicales>
+
+  <fabricantes>
+
+    <fabricante id="1">
+
+      <nombre>LP</nombre>
+
+      <pais>Estados Unidos</pais>
+
+      <direccion>1521 Green Road, Cleveland, Ohio</direccion>
+
+    </fabricante>
+
+    <fabricante id="2">
+
+      <nombre>Yamaha</nombre>
+
+      <pais>Japón</pais>
+
+      <direccion>10-1, Nakazawa-cho, Naka-ku, Hamamatsu-shi, Shizuoka-ken</direccion>
+
+    </fabricante>
+
+    <fabricante id="3">
+
+      <nombre>Jerónimo Peña Fernández</nombre>
+
+      <pais>España</pais>
+
+      <direccion>Útica 11, Jaén</direccion>
+
+    </fabricante>
+
+    <fabricante id="4">
+
+      <nombre>Roland</nombre>
+
+      <pais>Japón</pais>
+
+      <direccion>Hamamatsu, Shizuoka Prefecture</direccion>
+
+    </fabricante>
+
+  </fabricantes>
+
+  <instrumentos>
+
+    <instrumento categoria="percusión">
+
+      <nombre>Bongó</nombre>
+
+      <precio moneda="USD">50.00</precio>
+
+      <fabricante_id>1</fabricante_id>
+
+      <descripcion>Un par de bongós profesionales para tocar salsa y ritmos latinos.</descripcion>
+
+    </instrumento>
+
+    <instrumento categoria="viento">
+
+      <nombre>Flauta dulce</nombre>
+
+      <precio moneda="EUR">20.00</precio>
+
+      <fabricante_id>2</fabricante_id>
+
+      <descripcion>Una flauta dulce de madera para aprender a tocar música barroca.</descripcion>
+
+    </instrumento>
+
+    <instrumento categoria="cuerda">
+
+      <nombre>Guitarra acústica</nombre>
+
+      <precio moneda="USD">200.00</precio>
+
+      <fabricante_id>3</fabricante_id>
+
+      <descripcion>Una guitarra acústica de alta calidad para tocar canciones folk y country.</descripcion>
+
+    </instrumento>
+
+    <instrumento categoria="teclado">
+
+      <nombre>Piano digital</nombre>
+
+      <precio moneda="JPY">500000.00</precio>
+
+      <fabricante_id>4</fabricante_id>
+
+      <descripcion>Un piano digital con teclado contrapesado para tocar música clásica y jazz.</descripcion>
+
+    </instrumento>
+
+  </instrumentos>
+
+</instrumentos_musicales>
+
+<!-- 
+    1.- Obtener el nombre de todos los fabricantes
+    for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/fabricantes
+    return $x/fabricante/nombre/text()
+
+    2.- Obtener el precio de todos los instrumentos
+    for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos
+    return $x/instrumento/precio/data()
+
+    3.- Obtener la información de los instrumentos que cuestan más de $100
+    for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos/instrumento
+    where  $x/precio[@moneda = "USD"] > 100
+    return data($x/nombre/text()) || ": " || data($x/descripcion/text())
+
+    4.- Obtener el nombre del fabricante de la guitarra acústica
+    for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos/instrumento
+    for $y in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/fabricantes/fabricante
+    where $x/fabricante_id = $y/@id and contains($x/nombre,"Guitarra acústica")
+    return $y/nombre/text()
+
+    5.- Obtener el precio de la flauta dulce en euros
+    for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos/instrumento
+    where contains($x/nombre,"Flauta dulce")
+    return data($x/precio[@moneda = "EUR"]/text() || " €")
+
+    6.- Obtener el país de origen del fabricante de la guitarra acústica
+    for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos/instrumento
+    for $y in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/fabricantes/fabricante
+    where $x/fabricante_id = $y/@id and contains($x/nombre,"Guitarra acústica")
+    return $y/pais/text()
+
+    7.- Obtener el nombre y la dirección de todos los fabricantes de instrumentos japoneses
+    for $y in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/fabricantes/fabricante
+    where contains($y/pais,"Japón")
+    return data($y/nombre/text()) || " , " || data($y/direccion/text())
+
+    8.- Obtener el número de fabricantes que hay en la lista
+    count( doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/fabricantes/fabricante)
+
+    9.- Obtener la descripción del instrumento más caro
+    for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos/instrumento
+    where $x/precio[@moneda = "USD"] = max(for $y in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos/instrumento
+    return data($y/precio[@moneda = "USD"]))
+    return data($x/nombre/text()) || ": " || data($x/descripcion/text())
+
+    10.- Obtener el nombre de todos los instrumentos que han sido fabricados en Estados Unidos
+    for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos/instrumento
+    for $y in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/fabricantes/fabricante
+    where $x/fabricante_id = $y/@id and contains($y/pais,"Estados Unidos")
+    return $x/nombre/text()
+
+    11.- Obtener el precio promedio de los instrumentos
+    for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos
+    return avg($x//precio)
+
+    12.- Obtener el nombre del instrumento más barato y su precio
+    for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos/instrumento
+    where $x/precio[@moneda = "USD"] = min(for $y in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos/instrumento
+    return data($y/precio[@moneda = "USD"]))
+    return data($x/nombre/text())
+
+    13.- Obtener el nombre de todos los instrumentos que tienen más de 5 cuerdas
+    NO HACER
+
+    14.- Obtener el nombre del fabricante y la dirección de todos los fabricantes que producen más de un tipo de instrumento  
+    for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/fabricantes/fabricante
+    for $y in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos
+    where count($x/@id = $y/fabricante_id)>1
+    return data($x/nombre) || " - " || data($x/direccion)
+
+    15.- Obtener el nombre y el precio de los instrumentos que fueron fabricados por un fabricante de Japón y que cuestan menos de $500
+    for $x in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/fabricantes/fabricante
+    for $y in doc("G:\Mi unidad\Lenguaje\3º Trimestre\instrumentos.xml")/instrumentos_musicales/instrumentos/instrumento
+    where $y/fabricante_id = $x/@id and contains($x/pais,"Japón") and $y/precio<500.00
+    return data($y/nombre/text()) || " , " || data($y/precio/text())
+
+-->

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsi:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+    <xsi:element name="persona">
+        <xsi:complexType>
+            <xsi:sequence>
+                <xsi:element name="nombre" type="xsi:string"/>
+                <xsi:element name="mujer" type="xsi:string"/>
+                <xsi:element name="fecha-de-nacimiento"/>
+                    <xsi:complexType>
+                        <xsi:sequence>
+                            <xsi:element name="dia" type="xsi:string"/>
+                            <xsi:element name="mes" type="xsi:string"/>
+                            <xsi:element name="anyo" type="xsi:string"/>
+                        </xsi:sequence>
+                    </xsi:complexType>
+                </xsi:element>
+                <xsi:element name="ciudad" type="xsi:string"/>
+            </xsi:sequence>
+        </xsi:complexType>
+    </xsi:element>
+</xsi:schema>

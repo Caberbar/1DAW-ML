@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pelicula>
+    <titulo>AQUELLAS JUERGAS UNIVERSITARIA</titulo>
+    <titulooriginal>Old Schoo</titulooriginal>
+    <paisRodaje>EEUU</paisRodaje>
+    <año>2003</año>
+    <duracion>93 minutos</duracion>
+    <director>
+        <nombre>Todd Phillips</nombre>
+    </director>
+    <interprete>
+        <actor>
+            <nombre>Will Ferrell</nombre>
+            <nombre>Luke Wilson</nombre>
+            <nombre>Vince Vaughn</nombre>
+            <nombre>Jeremy Piven</nombre>
+            <nombre>Sean William Scott</nombre>
+        </actor>
+        <actriz>
+            <nombre>Juliette Lewis</nombre>
+        </actriz>
+    </interprete>
+    <sinopsis>
+        Mitch, Frank y Beanie son tres amigos treintañeros cuyas vidas no son exactamente lo 
+        que esperaban. Mitch tiene una novia ninfómana que se mete en la cama con el primero 
+        que agarra. Frank se ha casado y su matrimonio nada tiene que ver con 
+        las juergas salvajes que organizaban años atrás. Y Beanie es un padre de familia que se 
+        muere por recuperar su alocada juventud. Pero las cosas cambian cuando 
+        Beanie sugiere que creen su propia fraternidad, en la nueva casa que Mitch tiene junto al 
+        campus de la universidad. Una ocasión para revivir tiempos gloriosos, hacer nuevos 
+        amigos y de volver a sus viejas, salvajes y desmadradas juergas de estudiantes.
+    </sinopsis>
+    <enlace>http://www.oldschool-themovie.com/</enlace>
+    <genero>Comedia</genero>
+    <clasificacion>Mayores de 16 años</clasificacion>
+</pelicula>

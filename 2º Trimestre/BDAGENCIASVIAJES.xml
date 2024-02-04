@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BDAGENCIAVIAJES SYSTEM "BAGENCIADEVIAJES.dtd">
+<bdagenciadeviajes>
+    <agenciadeviajes>
+        <tourOperador CIF="1234">
+            <nombreEmpresa>Juanjo</nombreEmpresa>
+            <web>Juanjo.com</web>
+            <direccion>
+                <calle>Tortilla</calle>
+                <numero>3</numero>
+                <cp>18549</cp>
+                <localidad>Huetor</localidad>
+                <provincia>Granada</provincia>
+                <pais>España</pais>
+            </direccion>
+            <tlf></tlf>
+            <nacionalidad>Español</nacionalidad>
+        </tourOperador>
+        <paqueteTuristico idPaquete="124" tourOperador="145" origen="Burgos" transporte="Camión" periododTiempo="50"
+            regionEstancia="Madrid" precio="2000">
+            <descripcion></descripcion>
+            <fecSalida>
+                <dia></dia>
+                <mes></mes>
+                <anno></anno>
+            </fecSalida>
+            <fecRegreso>
+                <dia></dia>
+                <mes></mes>
+                <anno></anno>
+            </fecRegreso>
+        </paqueteTuristico>
+
+        <cliente dni="1245987A">
+            <nombre></nombre>
+            <apellido></apellido>
+            <apellido></apellido>
+            <tlf></tlf>
+            <direccion>
+                <avenida></avenida>
+                <numero></numero>
+                <cp></cp>
+                <localidad></localidad>
+                <provincia></provincia>
+            </direccion>
+            <nacionalidad></nacionalidad>
+            <estadoCivil></estadoCivil>
+        </cliente>
+
+        <viaje dniCliente="">
+            <paqueteTuristico idPaquete="" tourOperador="" origen="" transporte="" periododTiempo=""
+                regionEstancia="" precio="">
+                <descripcion></descripcion>
+                <fecSalida>
+                    <dia></dia>
+                    <mes></mes>
+                    <anno></anno>
+                </fecSalida>
+                <fecRegreso>
+                    <dia></dia>
+                    <mes></mes>
+                    <anno></anno>
+                </fecRegreso>
+            </paqueteTuristico>
+            <paqueteTuristico idPaquete="" tourOperador="" origen="" transporte="" periododTiempo=""
+                regionEstancia="" precio="">
+                <descripcion></descripcion>
+                <fecSalida>
+                    <dia></dia>
+                    <mes></mes>
+                    <anno></anno>
+                </fecSalida>
+                <fecRegreso>
+                    <dia></dia>
+                    <mes></mes>
+                    <anno></anno>
+                </fecRegreso>
+            </paqueteTuristico>
+        </viaje>
+    </agenciadeviajes>
+</bdagenciadeviajes>

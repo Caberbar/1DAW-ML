@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT libro (capitulo+)>
+<!ELEMENT capitulo (titulo, autor, descripcion )>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ATTLIST capitulo paginas CDATA #REQUIRED>

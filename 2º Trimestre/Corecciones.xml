@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documentos>
+    <!--
+    <deportistas>
+        <deportista>
+            <deporte Atletismo />
+            <nombre>Jesse
+    Owens</nombre>
+        <deportista>
+            <deporte Natación />
+            <nombre>Mark
+    Spitz</nombre>
+        </deportista>
+    </deportistas>
+-->
+
+    <deportistas>
+        <deportista>
+            <deporte>Atletismo</deporte>
+            <nombre>Jesse Owens</nombre>
+        </deportista>
+        <deportista>
+            <deporte>Natación</deporte>
+            <nombre>Mark Spitz</nombre>
+        </deportista>
+    </deportistas>
+
+
+    <!-- __________________________________________________________________________ -->
+
+
+    <!-- 
+    <pelicula>
+        <titulo>Con faldas y a lo loco</titulo>
+        <director>Billy
+    Wilder</director>
+    </pelicula>
+    <pelicula>
+        <director>Leo McCarey</director>
+    <titulo>Sopa de ganso</titulo>
+    </pelicula>
+    <autor />wilde</autor>
+    -->
+
+    <peliculas autor="Wilde">
+        <pelicula>
+            <titulo>Con faldas y a lo loco</titulo>
+            <director>Billy Wilder</director>
+        </pelicula>
+        <pelicula>
+            <director>Leo McCarey</director>
+            <titulo>Sopa de ganso</titulo>
+        </pelicula>
+    </peliculas>
+
+
+     <!-- __________________________________________________________________________ -->
+
+
+     <!-- 
+    <texto>
+        <Titulo>XML explicado a los niños</titulo>
+        <párrafo>El <abreviatura>XML</abreviatura>define cómo crear 
+        lenguajes de marcas.</párrafo>
+        <párrafo>Las marcas se añaden a un documento de texto 
+        para añadir información.</párrafo>
+        <http://>www.example.org</http://>
+    </texto>
+     -->
+
+     <texto>
+        <titulo>XML explicado a los niños</titulo>
+        <parrafo>El <abreviatura>XML</abreviatura>define cómo crear lenguajes de marcas.</parrafo>
+        <parrafo>Las marcas se añaden a un documento de texto para añadir información.</parrafo>
+        <http>www.example.org</http>
+    </texto>
+
+
+     <!-- __________________________________________________________________________ -->
+
+
+     <!-- 
+    <geografia mundial>
+        <pais>
+            <pais>España</pais>
+            <continente>Europa</continente>
+            <capital></capital nombre="Madrid">
+         </pais>
+    </geografia mundial>
+
+     -->
+
+     <geografia_mundial>
+        <paises>
+            <pais>España</pais>
+            <continente>Europa</continente>
+            <capital nombre="Madrid"></capital>
+            </paises>
+    </geografia_mundial>
+
+
+    <!-- __________________________________________________________________________ -->
+
+
+    <!-- 
+    <programas>
+        <programa nombre="Firefox" licencia="GPL" licencia="MPL" />
+        <programa nombre="OpenOffice.org" licencia=LGPL />
+        <programa nombre="Inkscape" licencia="GPL" />
+    </programas>
+    -->
+
+    <programas>
+        <programa nombre="Firefox">
+            <licencia>GPL</licencia>
+            <licencia>MPL</licencia>
+        </programa>
+        <programa nombre="OpenOffice.org">
+            <licencia>LGPL</licencia>
+        </programa>
+        <programa nombre="Inkscape">
+            <licencia>GPL</licencia>
+        </programa>
+    </programas>
+
+
+    <!-- __________________________________________________________________________ -->
+
+
+    <!-- 
+    <mundiales-de-futbol>
+        <mundial>
+            <pais="España" />
+            <1982 />
+        </mundial>
+    </mundiales-de-futbol>
+    -->
+
+    <mundiales_de_futbol> <!-- Es recomendable escribirlo todo junto o con guiones bajos-->
+        <mundial>
+            <pais>España</pais>
+            <año>1982</año> <!-- Una etiqueta nunca puede empezar con un número -->
+        </mundial>
+    </mundiales_de_futbol>
+
+
+    <!-- __________________________________________________________________________ -->
+
+
+    <!-- 
+    <mediosDeTransporte>
+        <bicicleta velocidad="v<100km/h" />
+        <patinete velocidad maxima="50 km/h"
+    </mediosDeTransporte>
+    -->
+
+    <mediosDeTransporte>
+        <bicicleta velocidad="v&lt;100km/h" />
+        <patinete velocidadMaxima="50km/h" />
+    </mediosDeTransporte>
+
+</documentos>

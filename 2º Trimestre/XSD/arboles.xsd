@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:complexType name="hazEnves">
+    <xs:choice>
+        <xs:sequence>
+            <xs:element name="hojasJovenes" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            <xs:element name="hojasViejas" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+        <xs:element name="hojasUnicas" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:choice>
+</xs:complexType>
+
+    <xs:element name="arboles">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="arbol" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombreComun" type="xs:string" minOccurs="0" maxOccurs="2" />
+                            <xs:element name="altura" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:choice>
+                                            <xs:sequence>
+                                                <xs:element name="min" type="xs:integer" />
+                                                <xs:element name="max" type="xs:integer" />
+                                            </xs:sequence>
+                                            <xs:element name="media" type="xs:integer" />
+                                        </xs:choice>
+                                        <xs:element name="unidad" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="formaYEstructura" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="copa" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                                        <xs:element name="tronco" type="xs:string"/>
+                                        <xs:element name="ramaje" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="color" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="primavera">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="haz" type="hazEnves"></xs:element>
+                                                    <xs:element name="enves" type="hazEnves"></xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="otonio" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="haz" type="hazEnves"></xs:element>
+                                                    <xs:element name="enves" type="hazEnves"></xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="resistencia" minOccurs="0" maxOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tipo" type="xs:string"></xs:element>
+                                        <xs:element name="grados" type="xs:integer"></xs:element>
+                                        <xs:element name="unidad" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="vegetacion" type="xs:string"></xs:attribute>
+                        <xs:attribute name="nombreCientifico" type="xs:string"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

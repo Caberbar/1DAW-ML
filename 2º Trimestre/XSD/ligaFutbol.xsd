@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ligas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="liga">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="jugadores">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="jugador" minOccurs="1" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="entrenadores">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="entrenador" minOccurs="1" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="arbitros">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="arbitro" minOccurs="1" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="estadios">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="estadio" minOccurs="1" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="equipos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="equipo" minOccurs="1" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="partidos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="partido" minOccurs="1" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="jornadas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="jornada" minOccurs="1" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="temporada" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="2011_2012" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="categoria" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="PrimeraDivision"/>
+                                    <xs:enumeration value="SegundaDivision" />
+                                    <xs:enumeration value="TerceraDivision" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- DECLARACION DE JUGADOR -->
+    <xs:element name="jugador">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1" />
+                <xs:element name="apellido" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element name="alias" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element name="fechaNacimiento" type="tFecha"/>
+                <xs:element ref="nacionalidad" minOccurs="0" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="identificador" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <xs:pattern value="JUG_[0-9]{8}[A-Z]" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="demarcacion" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Portero" />
+                        <xs:enumeration value="Defensa" />
+                        <xs:enumeration value="Delantero" />
+                        <xs:enumeration value="Centro" />
+                        <xs:enumeration value="Lateral" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- DECLARACION DE ENTRENADOR -->    
+    <xs:element name="entrenador">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1" />
+                <xs:element name="apellido" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element name="alias" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element name="fechaNacimiento" type="tFecha"/>
+                <xs:element ref="nacionalidad" minOccurs="0" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="identificador" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <xs:pattern value="ENT_[0-9]{8}[A-Z]" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="titulos" type="xs:integer" use="optional" />
+        </xs:complexType>
+    </xs:element>
+
+    <!-- DECLARACION DE ARBITRO -->   
+    <xs:element name="arbitro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1" />
+                <xs:element name="apellido" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element name="alias" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                <xs:element ref="nacionalidad" minOccurs="0" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute name="identificador" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <xs:pattern value="ARB_[0-9]{8}[A-Z]" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- DECLARACION DE ESTADRIO -->       
+    <xs:element name="estadio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="2"/>
+            </xs:sequence>
+            <xs:attribute name="identificador" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <xs:pattern value="EST_[0-9]{3}" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="ubicacion" type="xs:string" use="required" />
+            <xs:attribute name="aforo" type="xs:integer" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <!-- DECLARACION DE EQUIPO -->       
+    <xs:element name="equipo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="2"/>
+                <xs:element name="fechaConstitucion" type="tFecha"/>
+                <xs:element name="jugadoresID">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="jugadorID" minOccurs="1" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="identificador" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <xs:pattern value="EQU_[0-9]{3}" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="categoria">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="PrimeraDivision" />
+                        <xs:enumeration value="SegundaDivision" />
+                        <xs:enumeration value="TerceraDivision" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="entrenador" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="ENT_[0-9]{8}[A-Z]" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="estadio" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="EST_[0-9]{3}" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- DECLARACION DE PARTIDO -->       
+    <xs:element name="partido">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="equiposID">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="equipoID" minOccurs="1" maxOccurs="2">
+                                <xs:complexType>
+                                    <xs:attribute name="identificador">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="EQU_[0-9]{3}" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="identificador" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <xs:pattern value="PAR_[0-9]{3}" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="estadio" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="EST_[0-9]{3}" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="arbitro" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="ARB_[0-9]{8}[A-Z]" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- DECLARACION DE JORNADA -->       
+    <xs:element name="jornada">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fecha" type="tFecha"/>
+                <xs:element name="partidosJornada">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="partidoID" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="identificador" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="PAR_[0-9]{3}" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="hora" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:integer">
+                                                <xs:minInclusive value="0"/>
+                                                <xs:maxInclusive value="23"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="canales">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="canal" minOccurs="1" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="identificador" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <xs:pattern value="JOR_[0-9]{3}" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="competicion" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="2021_2022" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="emision" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Codificado" />
+                        <xs:enumeration value="Abierto" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- DECLARACION DEL ELEMENTO FECHA -->       
+    <xs:complexType name="tFecha">
+        <xs:attribute name="anno">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[0-9]{4}"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="mes">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="Enero"/>
+                    <xs:enumeration value="Febrero"/>
+                    <xs:enumeration value="Marzo"/>
+                    <xs:enumeration value="Abril"/>
+                    <xs:enumeration value="Mayo"/>
+                    <xs:enumeration value="Junio"/>
+                    <xs:enumeration value="Julio"/>
+                    <xs:enumeration value="Agosto"/>
+                    <xs:enumeration value="Septiembre"/>
+                    <xs:enumeration value="Octubre"/>
+                    <xs:enumeration value="Noviembre"/>
+                    <xs:enumeration value="Diciembre"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="dia">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                        <xs:enumeration value="1"/>
+                        <xs:enumeration value="2"/>
+                        <xs:enumeration value="3"/>
+                        <xs:enumeration value="4"/>
+                        <xs:enumeration value="5"/>
+                        <xs:enumeration value="6"/>
+                        <xs:enumeration value="7"/>
+                        <xs:enumeration value="8"/>
+                        <xs:enumeration value="9"/>
+                        <xs:enumeration value="10"/>
+                        <xs:enumeration value="11"/>
+                        <xs:enumeration value="12"/>
+                        <xs:enumeration value="13"/>
+                        <xs:enumeration value="14"/>
+                        <xs:enumeration value="15"/>
+                        <xs:enumeration value="16"/>
+                        <xs:enumeration value="17"/>
+                        <xs:enumeration value="18"/>
+                        <xs:enumeration value="19"/>
+                        <xs:enumeration value="20"/>
+                        <xs:enumeration value="21"/>
+                        <xs:enumeration value="22"/>
+                        <xs:enumeration value="23"/>
+                        <xs:enumeration value="24"/>
+                        <xs:enumeration value="25"/>
+                        <xs:enumeration value="26"/>
+                        <xs:enumeration value="27"/>
+                        <xs:enumeration value="28"/>
+                        <xs:enumeration value="29"/>
+                        <xs:enumeration value="30"/>
+                        <xs:enumeration value="31"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+    <!-- DECLARACION DEL ELEMENTO NACIONALIDAD -->       
+    <xs:element name="nacionalidad">
+        <xs:complexType>
+            <xs:attribute name="tipo" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                        <xs:enumeration value="Espanola" />
+                        <xs:enumeration value="Extranjera" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

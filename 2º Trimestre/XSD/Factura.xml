@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facturas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="Fact.xsd">
+    <factura codigofactura="826" ncliente="9878">
+        <fechaemision>
+            <dia>21</dia>
+            <mes>12</mes>
+            <anno>2022</anno>
+        </fechaemision>
+        <cliente dni="14785236W">
+            <nombre>Santiago</nombre>
+            <apellido>Pallarés</apellido>
+            <apellido>Vicaria</apellido>
+            <direccion>
+                <calle>Los gatos</calle>
+                <numero>2</numero>
+                <cp>11660</cp>
+                <localidad>Barbate</localidad>
+                <provincia>Cádiz</provincia>
+            </direccion>
+            <tel>658482569</tel>
+            <pedido>
+                <articulo idArt="121">
+                    <tipoArticulo>Silla giratoria</tipoArticulo>
+                    <modelo>Damisela</modelo>
+                    <precio>45</precio>
+                    <cantidad>2</cantidad>
+                    <subtotal>90</subtotal>
+                </articulo>
+                <articulo idArt="9568">
+                    <tipoArticulo>Mesa escritorio</tipoArticulo>
+                    <modelo>ZuperJ</modelo>
+                    <precio>120</precio>
+                    <cantidad>1</cantidad>
+                    <subtotal>120</subtotal>
+                </articulo>
+                <articulo idArt="1158">
+                    <tipoArticulo>Lámpara mesa</tipoArticulo>
+                    <modelo>Emérito</modelo>
+                    <precio>80</precio>
+                    <cantidad>3</cantidad>
+                    <subtotal>240</subtotal>
+                </articulo>
+                <descuento>20%</descuento>
+                <iva>21%</iva>
+                <totalFactura>435,6</totalFactura>
+                <moneda>Euro</moneda>
+            </pedido>
+        </cliente>
+    </factura>
+</facturas>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="cripto.xsl"?>
+<crypto_data>
+  <cryptocurrency>
+    <name>Bitcoin</name>
+    <symbol>BTC</symbol>
+    <price currency="USD">57000</price>
+    <market_cap currency="USD">1065B</market_cap>
+    <circulating_supply>18.7M</circulating_supply>
+	    <logo_url>https://s2.coinmarketcap.com/static/img/coins/64x64/1.png</logo_url>
+  </cryptocurrency>
+  <cryptocurrency>
+    <name>Ethereum</name>
+    <symbol>ETH</symbol>
+    <price currency="USD">3600</price>
+    <market_cap currency="USD">420B</market_cap>
+    <circulating_supply>116M</circulating_supply>
+	    <logo_url>https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png</logo_url>
+  </cryptocurrency>
+  <cryptocurrency>
+    <name>Cardano</name>
+    <symbol>ADA</symbol>
+    <price currency="USD">2.3</price>
+    <market_cap currency="USD">75B</market_cap>
+    <circulating_supply>32.2B</circulating_supply>
+	    <logo_url>https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png</logo_url>
+  </cryptocurrency>
+  <cryptocurrency>
+    <name>Binance Coin</name>
+    <symbol>BNB</symbol>
+    <price currency="USD">650</price>
+    <market_cap currency="USD">100B</market_cap>
+    <circulating_supply>154M</circulating_supply>
+	    <logo_url>https://s2.coinmarketcap.com/static/img/coins/64x64/825.png</logo_url>
+  </cryptocurrency>
+  <cryptocurrency>
+    <name>XRP</name>
+    <symbol>XRP</symbol>
+    <price currency="USD">1.5</price>
+    <market_cap currency="USD">70B</market_cap>
+    <circulating_supply>46.5B</circulating_supply>
+	    <logo_url>https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png</logo_url>
+  </cryptocurrency>
+</crypto_data>

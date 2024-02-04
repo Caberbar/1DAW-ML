@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DEFINICION DE ENTIDADES -->
+<!ENTITY % direccion "(lugar, numero, cp, municipio)">
+<!ENTITY % prefijo '(956|955|959|957|958|953|950|952) "956"'>
+<!ENTITY % provincia '(Cádiz|Sevilla|Huelva|Córdoba|Granada|Jaén|Almería|Málaga) "Cádiz"'>
+<!ENTITY % pais 'CDATA "España"'>
+<!ENTITY % telefono "(fijo*, movil+)">
+<!ENTITY % dia "(01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)">
+<!ENTITY % mes "(Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre)">
+<!ENTITY % año "(2000|2001|2002|2003|2004|2005|2006|2007|2008|2009|2010|2011)">
+
+<!-- DECLARACION ALMACEN -->
+<!--DATOS: proveedor, producto, cliente, factura, pedido) -->
+
+<!ELEMENT almacen (proveedor+, producto+, cliente+, factura*, pedido*)>
+
+<!-- DECLARACION DE PROVEEDORES -->
+<!--DATOS: idprov, nombreprov, direccionprov, tlfprov, faxprov) -->
+
+<!ELEMENT proveedor (nombreprov+, direccionprov+, tlfprov+, faxprov+)>
+<!-- La unica forma de garantizar que el idprov será unico para cada proveedor es ponerlo como atributo. Si lo pongo como elemento no puedo garantizar eso. -->
+<!-- Además, hay que tener en cuenta que al ponerlo como atributo ID, despues se puede hacer referencia a él, mediante un atributo de tipo IDREF.-->
+<!ATTLIST proveedor idprov ID #REQUIRED
+                    pais CDATA #FIXED "España">
+<!ELEMENT nombreprov (#PCDATA)>
+<!ELEMENT direccionprov %direccion;>
+<!ELEMENT lugar (calle|plaza|avenida)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT plaza (#PCDATA)>
+<!ELEMENT avenida (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT municipio (#PCDATA)>
+<!-- Los atributos de tipo lista de opciones, en los que se quiera establecer una opción por defecto, no pueden tener el tipo #REQUIRED. -->
+<!ATTLIST direccionprov pais %pais;>
+<!ATTLIST municipio provincia %provincia;>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT tlfprov %telefono;>
+<!ELEMENT fijo EMPTY>
+<!ATTLIST fijo prefijo %prefijo;
+               numero CDATA #REQUIRED>
+<!ELEMENT movil (#PCDATA)>
+<!ELEMENT faxprov (#PCDATA)>
+<!ATTLIST faxprov prefijo %prefijo;
+                  numero CDATA #REQUIRED >
+
+<!-- DECLARACION DE PRODUCTOS -->
+<!--DATOS: idprod, nombreprod, categoriaprod, pvpprod, idprov, stock) -->
+
+<!ELEMENT producto (nombreprod, pvpprod, stockprod)>
+<!ELEMENT nombreprod (#PCDATA)>
+<!ATTLIST producto idprod ID #REQUIRED
+                   idprov IDREF #REQUIRED
+                   categoriaprod (Programas|Componentes|Pantallas|Impresoras|Teclados|Ratones|Multimedia) #IMPLIED>
+<!ELEMENT pvpprod (#PCDATA)>
+<!ELEMENT stockprod (#PCDATA)>
+
+<!-- DECLARACION DE CLIENTES -->
+<!--DATOS: idcli, nombrecli, direccioncli, tlfcli, faxcli) -->
+
+<!ELEMENT cliente (nombrecli, direccioncli, tlfcli+, faxcli*)>
+<!ATTLIST cliente idcli ID #REQUIRED>
+<!ELEMENT nombrecli (#PCDATA)>
+<!ELEMENT direccioncli %direccion;>
+<!ATTLIST direccioncli pais %pais;>
+<!ELEMENT tlfcli %telefono;>
+<!ATTLIST faxcli prefijo %prefijo;
+                  numero CDATA #REQUIRED >
+
+<!-- DECLARACION DE FACTURAS -->
+<!--DATOS: idfact, fechafact, lineafact(idprodfact, pu, total), idclifact, subtotalfact, ivafact, importefact) -->
+
+<!ELEMENT factura (fechafact, lineafact+, subtotalfact, ivafact, importefact) >
+<!ATTLIST factura idfact ID #REQUIRED 
+                  idclifact IDREF #REQUIRED >
+<!ELEMENT fechafact EMPTY >
+<!ATTLIST fechafact dia %dia; #REQUIRED
+                    mes %mes; #REQUIRED
+                    año %año; #REQUIRED > 
+<!ELEMENT lineafact EMPTY >
+<!ATTLIST lineafact idprodfact IDREF #REQUIRED
+                    cantidadfact CDATA #REQUIRED
+                    pu CDATA #REQUIRED
+                    total CDATA #REQUIRED >
+<!ELEMENT subtotalfact (#PCDATA) >
+<!ELEMENT ivafact (#PCDATA) >
+<!ELEMENT importefact (#PCDATA) >
+
+<!-- DECLARACION DE PEDIDOS -->
+<!--DATOS: idped, fechaped, lineaped(idprodped), idcliped, fechaentregaped) -->
+
+<!ELEMENT pedido (fechaenvioped, lineaped+, fechaentregaped) >
+<!ATTLIST pedido idped ID #REQUIRED 
+                 idcliped IDREF #REQUIRED >
+<!ELEMENT fechaenvioped EMPTY >
+<!ATTLIST fechaenvioped dia %dia; #REQUIRED
+                    mes %mes; #REQUIRED
+                    año %año; #REQUIRED > 
+<!ELEMENT lineaped EMPTY >
+<!ATTLIST lineaped idprodped IDREF #REQUIRED 
+                   cantidadped CDATA #REQUIRED>
+<!ELEMENT fechaentregaped EMPTY >
+<!ATTLIST fechaentregaped dia %dia; #REQUIRED
+                    mes %mes; #REQUIRED
+                    año %año; #REQUIRED > 

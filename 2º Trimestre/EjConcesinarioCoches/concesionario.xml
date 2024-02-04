@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concesionario SYSTEM "concesionario.dtd">
+<concesionario>
+    <coche matricula="1234DC" combustible="Diesel" puertas="5" plazas="5">
+        <marca>Seat</marca>
+        <modelo>Leon</modelo>
+        <motor></motor>
+        <fechamatric dia="1" mes="1" año="2000" />
+    </coche>
+    <coche matricula="">
+        <marca>Renault</marca>
+        <modelo>Megane</modelo>
+        <motor></motor>
+        <fechamatric dia="1" mes="1" año="2000" />
+    </coche>
+
+    <cliente dni="" >
+        <nombrecli></nombrecli>
+        <direccioncli>
+            <cp></cp>
+            <poblacion></poblacion>
+            <provincia></provincia>
+            <region></region>
+        </direccioncli>
+        <tlfcli></tlfcli>
+        <tlfcli></tlfcli>
+        <edad></edad>
+        <añoscarnet></añoscarnet>
+    </cliente>
+
+    <comercial tipocontrat="Practicas" dni="">
+        <nombrecom></nombrecom>
+        <tlfcom></tlfcom>
+        <fechacontrat dia="1" mes="1" año="2000" />
+        <ventas>
+            <año></año>
+            <nventas></nventas>
+        </ventas>
+    </comercial>
+    <venta idcliente="" idcomercial="" matcoche="">
+        <fechaventa dia="1" mes="1" año="2000" />
+        <importe>
+            <cantidad  tipopago="Financiado"></cantidad>
+        </importe>
+    </venta>
+</concesionario>

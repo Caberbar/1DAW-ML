@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT bdagenciadeviajes (agenciadeviajes)>
+<!ELEMENT agenciadeviajes (tourOperador+,paqueteTuristico+,viaje+,cliente+)>
+
+<!-- Agencia -->
+<!ELEMENT bdagenciadeviajes (agenciadeviajes)>
+<!ELEMENT agenciadeviajes (tourOperador+,paqueteTuristico+,viaje+,cliente+)>
+<!ELEMENT tourOperador (nombreEmpresa,web,direccion,tlf,nacionalidad)>
+<!ATTLIST tourOperador CIF ID #REQUIRED>
+<!ELEMENT nombreEmpresa (#PCDATA)>
+<!ELEMENT web (#PCDATA)>
+<!ELEMENT direccion ((calle|avenida|plaza),numero,cp,localidad,provincia,pais?)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT avenida (#PCDATA)>
+<!ELEMENT plaza (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT tlf (#PCDATA)>
+<!ELEMENT nacionalidad (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+
+<!-- Cliente -->
+<!ELEMENT cliente (nombre,apellido+,tlf,direccion,nacionalidad,estadoCivil)>
+<!ATTLIST cliente dni ID #REQUIRED>
+<!ATTLIST cliente sexo CDATA #IMPLIED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT estadoCivil (#PCDATA)>
+
+<!-- Paquete Turistico -->
+<!ELEMENT paqueteTuristico (descripcion,fecSalida, fecRegreso)>
+<!ATTLIST paqueteTuristico idPaquete ID #REQUIRED>
+<!ATTLIST paqueteTuristico tourOperador IDREF #REQUIRED>
+<!ATTLIST paqueteTuristico tipo (Playa|Ciudada|Montaña|Circuito|Crucero) "Playa">
+<!ATTLIST paqueteTuristico origen CDATA #REQUIRED>
+<!ATTLIST paqueteTuristico transporte CDATA #REQUIRED>
+<!ATTLIST paqueteTuristico periododTiempo CDATA #REQUIRED>
+<!ATTLIST paqueteTuristico regionEstancia CDATA #REQUIRED>
+<!ATTLIST paqueteTuristico precio CDATA #REQUIRED>
+<!ATTLIST paqueteTuristico regimen (AD|MP|PC|TI) "AD">
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT fecSalida (dia,mes,anno)>
+<!ELEMENT fecRegreso (dia,mes,anno)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT anno (#PCDATA)>
+
+<!-- Viajes -->
+<!ELEMENT viaje (paqueteTuristico+)>
+<!ATTLIST viaje dniCliente IDREF #REQUIRED>

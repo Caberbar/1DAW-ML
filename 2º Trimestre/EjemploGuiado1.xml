@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Clientes [
+    <!ELEMENT Clientes (Cliente+)>
+    <!ELEMENT Cliente (IdCliente,Empresa,Contacto,Ciudad,Provincia)>
+    <!ELEMENT IdCliente (#PCDATA)>
+    <!ELEMENT Empresa (#PCDATA)>
+    <!ELEMENT Contacto (#PCDATA)>
+    <!ELEMENT Ciudad (#PCDATA)>
+    <!ELEMENT Provincia (#PCDATA)>
+]>
+
+<Clientes>
+    <Cliente>
+        <IdCliente>1</IdCliente>
+        <Empresa>Defensa Personal Orient</Empresa>
+        <Contacto>Alfonso Papo</Contacto>
+        <Ciudad>Terrassa</Ciudad>
+        <Provincia>Barcelona</Provincia>
+    </Cliente>
+    <Cliente>
+        <IdCliente>2</IdCliente>
+        <Empresa>Mística y Salud S.A.</Empresa>
+        <Contacto>Ana Coreta</Contacto>
+        <Ciudad>Santander</Ciudad>
+        <Provincia>Santander</Provincia>
+    </Cliente>
+    <Cliente>
+        <IdCliente>3</IdCliente>
+        <Empresa>Paños Rias Bajas</Empresa>
+        <Contacto>Estela Marinera</Contacto>
+        <Ciudad>Vigo</Ciudad>
+        <Provincia>Pontevedra</Provincia>
+    </Cliente>
+</Clientes>

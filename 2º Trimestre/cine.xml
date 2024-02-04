@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cine SYSTEM "./cine.dtd">
+
+<cine>
+  <pelicula titulo="Harry Potter" año="2000" director="J.K Rowling" duracion="200 mnts" genero="Fantasia" idioma="Inglés">
+    <sinopsis>
+      Un niño se queda huerfano y consigue poderes.
+    </sinopsis>
+    <reparto>
+      <actor nombre="Jon" papel="Harry potter"/>
+      <actor nombre="Emma" papel="Hermion" />
+    </reparto>
+    <imagen url="https://castillogrande.jpg" descripcion="Escuela de hogwarts"/>
+  </pelicula>
+  <pelicula titulo="Titanic" año="1990" director="James cameron" duracion="200 mnts" genero="Romance" idioma="Inglés">
+    <sinopsis>
+      Un nuevo barco navega y se choca con un iceberg mientras tanto ocurre una historia de amor
+    </sinopsis>
+    <reparto>
+      <actor nombre="Leonardo Dicaprio" papel="Jack"/>
+      <actor nombre="Roberta" papel="Rose" />
+    </reparto>
+    <imagen url="https://barcotitanicchoque.jpg" descripcion="Barco"/>
+  </pelicula>
+</cine>

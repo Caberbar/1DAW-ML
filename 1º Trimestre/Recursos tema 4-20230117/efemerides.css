@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/*                                           */
+/* Carlos Bernal Barrionuevo                 */
+/*                                           */
+/* CSS ejercicio: Efemerides 14 diciembre    */
+/*                                           */
+/* 17/01/2023                                */
+/*                                           */
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Petemoss&display=swap');
+
+body {
+  background-color:#9d9d9d;
+  font-family: sans-serif;
+  width: 80%;
+  margin-right: auto;
+  margin-left:auto;
+}
+
+h1 {
+  font-family: 'Neucha', cursive;
+  margin: 0;
+  background: #79b4b7;
+  padding:1%;
+  color:#fff;
+}
+
+main {
+  display: block;
+  padding: 2%;
+  background-color:#fefbf3;
+}
+
+section {
+  border:  #9d9d9d 5px solid;
+  margin-bottom: 2%;
+  
+}
+
+h2 {
+  margin: 1%;
+  padding: 1%;
+  background-color: #f8f0df;
+  font-family: 'Petemoss', cursive;
+  font-size: 3em;
+  color:red;
+
+}
+
+article {
+  border: #4b6587 5px solid; 
+  background-color: #c8c6c6;
+  margin:2%;
+  width: 45%;
+  float:left;
+  height: 6em;
+  overflow: no;
+}
+
+h3 {
+  margin: 0;
+  padding-left: 5px;
+  background-color:#f0e5cf;
+  color:#581845;
+  padding:1%;
+
+}
+h3 + p {
+  color:#fff;
+  font-weight: bold;
+}
+p {
+  margin: 1%;
+}
+footer{
+  background: #333;
+  color:#fff;
+  padding:2%;
+}
+footer p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+.limpia{
+  clear: both;
+}
+
+@media only screen and (max-width: 1310px){
+  h1{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  body {
+    background-color: teal;
+  }
+  article {
+    border: #4b6587 5px solid; 
+    background-color: #c8c6c6;
+    margin:2%;
+    width: 95%;
+    height: 6em;
+    overflow: no;
+  }
+}
+

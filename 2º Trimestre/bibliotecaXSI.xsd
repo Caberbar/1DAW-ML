@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="bsbiblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="socio" maxOccurs="unbounded"/>
+                <xs:element ref="libro" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="socio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="direccion">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="lugar"/>
+                            <xs:element name="numero" minOccurs="0"/>
+                            <xs:element name="bloque" minOccurs="0"/>
+                            <xs:element name="piso" minOccurs="0"/>
+                            <xs:element name="puerta" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="tlf">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{9}"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="fechNac" type="Tfecha"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="dni">
+                <xs:simpleType>
+                    <xs:restriction base="String">
+                        <xs:pattern values="dni[0-9]{2}.[0-9]{3}.[0-9]{3}-[A-Z]"></xs:pattern>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="libro">
+        <xs:comeplexType>
+            <xs:sequence>
+                <xs:element name="titulo" type="xs:String"></xs:element>
+                <xs:element name="autor" type="xs:String"></xs:element>
+                <xs:element name="fechad" type="Tfecha"></xs:element>
+            </xs:sequence>
+        </xs:comeplexType>
+        <xs:attribute name="ISBN">
+            <xs:simpleType>
+                <xs:restriction>
+                    <xs:pattern value="{0-9}{2}-[0-9]{3}-[0-9]{4}-[0-9]{1}"></xs:pattern>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="tematica" type="xs:String" default="ciencias"></xs:attribute>
+    </xs:element>
+
+    <xs:element name="lugar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice>
+                    <xs:element name="Avda" type="xs:string"/>
+                    <xs:element name="Plaza" type="xs:string"/>
+                    <xs:element name="Calle" type="xs:string"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Tfecha">
+        <xs:attribute name="mes">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="Enero"></xs:enumeration>
+                    <xs:enumeration value="Febrero"></xs:enumeration>
+                    <xs:enumeration value="Marzo"></xs:enumeration>
+                    <xs:enumeration value="Abril"></xs:enumeration>
+                    <xs:enumeration value="Mayo"></xs:enumeration>
+                    <xs:enumeration value="Junio"></xs:enumeration>
+                    <xs:enumeration value="Julio"></xs:enumeration>
+                    <xs:enumeration value="Agosto"></xs:enumeration>
+                    <xs:enumeration value="Septiembre"></xs:enumeration>
+                    <xs:enumeration value="Octubre"></xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="dia">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="1"></xs:enumeration>
+                    <xs:enumeration value="2"></xs:enumeration>
+                    <xs:enumeration value="3"></xs:enumeration>
+                    <xs:enumeration value="4"></xs:enumeration>
+                    <xs:enumeration value="5"></xs:enumeration>
+                    <xs:enumeration value="6"></xs:enumeration>
+                    <xs:enumeration value="7"></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                    <xs:enumeration value=""></xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:attribute name="ano">
+        <xs:simpleType>
+            <xs:restriction base="">
+                <xs:pattern value="[0-9]{4}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+</xs:schema>

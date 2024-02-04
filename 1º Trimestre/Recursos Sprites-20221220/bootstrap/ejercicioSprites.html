@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Práctica de Sprites</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	<style>
+		body {background-image: url(./img/fondo.jpg); background-size: cover;}
+		.teal {background: teal;}
+		.gris {background: lightgrey;}
+		.negrita {font-weight: bolder;}
+		h2 {color: #928b8b;}
+		.verde{background: #c9ded4;}
+		.verdeclaro{background: #e4f3eb;;}
+		.parrafo{background: white;}
+		.margenes{text-align: justify; margin: 10px; padding: 10px;}
+		.imagen{margin-top: 14px;}
+		.linea {border-bottom: 2px solid teal;}
+		.titulo {color: white;font-size: 80px;}
+		.iconos {height: 46px;}
+		.iconos ul {margin: 0px;padding: 0px; margin-left: 10px;}
+		.iconos ul li {margin: 0px; padding: 0px; float: left; list-style: none;}
+		.ico1, .ico2, .ico3, .ico4, .ico5 {background-image: url(./img/icoSprite.png); background-repeat: no-repeat;} 
+		.iconos ul li a {display: block; width: 100%;height: 46px;}
+		
+		
+		.ico1 {width: 45px;background-position: 0px 0px;}
+		.ico1:hover{width: 45px;background-position: -210px 0px;}
+		.ico2 {width: 45px;background-position: -45px 0px;}
+		.ico2:hover{width: 45px;background-position: -256px 0px;}
+		.ico3 {width: 45px;background-position: -92px 0px;}
+		.ico3:hover{width: 45px;background-position: -302px 0px;}
+		.ico4 {width: 41px;background-position: -135px 0px;}
+		.ico4:hover{width: 41px;background-position: -345px 0px;}
+		.ico5 {width: 42px;background-position: -171px 0px;}
+		.ico5:hover{width: 42px;background-position: -381px 0px;}
+		
+		.redes {background-image: url(./img/redes.png); width: 45px; height: 45px; display: block;}
+
+		.nose {background-position: 0px 0px;}
+		.nose:hover {background-position: 0px -48px;}
+		.facebook {background-position: -47px 0px;}
+		.facebook:hover {background-position: -47px -48px;}
+		.yt {background-position: -94px 0px;}
+		.yt:hover {background-position: -94px -48px;}
+		.tw {background-position: -141px 0px;}
+		.tw:hover {background-position: -141px -48px;}
+		.in {background-position: -188px 0px;}
+		.in:hover {background-position: -188px -48px;}
+		.goo {background-position: -243px 0px;}
+		.goo:hover {background-position: -243px -48px;}
+
+		.flex{display: flex;}
+
+		.foto {padding:5px; border:3px solid white; border-radius:100%; height:130px; width:130px; margin:auto; margin-top:10%; background-image:url(./img/caretos.jpg);}
+		.f1{ background-position: -68px -64px;}
+		.f2{ background-position: -780px -270px;}
+		.f3{ background-position: -80px -240px;}
+		.f4{ background-position: -520px -240px;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 teal">
+				<div class="row">
+					<div class="col-1 imagen"><img src="img/icono.png"> </div>	
+					<div class="col-11"><span class="titulo"> NOSOTROS</span></div>				
+				</div>
+				<div class="row">
+					<div class="iconos col-6">
+							<ul>
+								<li class="ico1"><a href="#" ></a></li>
+								<li class="ico2"><a href="#" ></a></li>
+								<li class="ico3"><a href="#" ></a></li>
+								<li class="ico4"><a href="#" ></a></li>
+								<li class="ico5"><a href="#" ></a></li>
+							</ul>
+							<div class="clearfix"></div>
+					</div>
+					<div class="col-6 flex">
+						<span class="redes nose"></span>
+						<span class="redes facebook"></span>
+						<span class="redes yt"></span>
+						<span class="redes tw"></span>
+						<span class="redes in"></span>
+						<span class="redes goo"></span>
+					</div>	
+				</div>
+				<div class="row gris ">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-12 linea"><h2> ¿Por qué debería elegirnos?</h2></div>
+						</div>
+						<div class="row">
+							<div class="col-4"><p class="parrafo margenes"><strong class="negrita">Eficaces</strong><br>
+
+ar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló </p></div>
+							<div class="col-4"><p class="parrafo margenes"><strong class="negrita">Comprometidos</strong><br>
+
+ar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló </p></div>
+							<div class="col-4"><p class="parrafo margenes"><strong class="negrita">Resolutivos</strong><br>
+
+ar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló </p></div>
+						</div>
+						<div class="row">
+							<div class="col-12 linea"><h2> ¿Por qué debería elegirnos?</h2></div>							
+						</div>
+						<div class="row">
+							<div class="col-6 ">
+								<div class="row margenes">
+									<div class="col-4 verdeclaro">
+										<figure>
+				          					<div  class="foto f1"></div>
+				          					<a href="#"></a>
+				          				</figure>
+				          			</div>
+									<div class="col-8 verde">
+										<h3>Oscar</h3>
+										<h4>Gerente</h4>
+										<p>N. del T. persona que se dedica a la imprenta </p>
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="row margenes">
+									<div class="col-8 verde">
+										<h3>Pedro</h3>
+										<h4>Subdirector</h4>
+										<p>N. del T. persona que se dedica a la imprenta </p>
+									</div>
+									<div class="col-4 verdeclaro">
+										<figure>
+				          					<div  class=" foto f2"></div>
+				          					<a href="#" ></a>
+				          				</figure>
+				          			</div>									
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6">
+								<div class="row margenes">
+									<div class="col-4 verdeclaro">
+										<figure>
+				          					<div  class=" foto f3"></div>
+				          					<a href="#"  ></a>
+				          				</figure>
+									</div>
+									<div class="col-8 verde">
+										<h3>Elisa</h3>
+										<h4>Diseñadora Gráfica</h4>
+										<p>N. del T. persona que se dedica a la imprenta </p>
+									</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="row margenes">
+
+									<div class="col-8 verde">
+										<h3>Evaristo</h3>
+										<h4>Asistente de imprenta</h4>
+										<p>N. del T. persona que se dedica a la imprenta </p>
+									</div>
+									<div class="col-4 verdeclaro">
+										<figure>
+				          					<div  class=" foto f4"></div>
+				          					<a href="#" ></a>
+				          				</figure>
+									</div>
+								
+								</div>
+							</div>
+						</div>
+					</div>					
+				</div>
+				<div class="row teal">
+					&nbsp;
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

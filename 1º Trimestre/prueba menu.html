@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<title>prueba</title>
+		<meta charset="utf-8"/>
+		<style type="text/css">
+
+			#menu a{
+				display: block;
+				background-color: blue;
+				border-radius: 8px;
+				margin-right: 5px;
+				padding: 10px;
+				text-align: center;
+				color: white;
+				font-weight: bold;
+				text-decoration: none;
+			}
+
+			#menu ul{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: row;	
+			}
+
+			#menu li{
+				flex-grow:1;
+			}
+
+			#menu a:hover{
+				background-color: blueviolet;
+			}
+
+			#menu li ul{
+				display: none;
+				position: absolute;
+				min-width: 180px;
+			}
+
+			#menu li:hover > ul {
+				display: block;
+			}
+
+			#menu li ul li {
+				position: relative;
+			}
+			#menu li ul li ul{
+				right: -180px;
+				top:0px;
+			}
+
+        </style>
+	</head>
+	<body>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="#">Pag-1</a>
+				</li>
+				<li>
+					<a href="#">Pag-2</a>
+					<ul>
+						<li>
+							<a href="#">SubMenu1</a>
+						</li>
+						<li>
+							<a href="#">SubMenu2</a>
+						</li>
+						<li>
+							<a href="#">SubMenu3</a>
+						</li>
+						<li>
+							<a href="#">SubMenu4</a>
+							<ul>
+								<li>
+									<a href="#">SubsubMenu1</a>
+								</li>
+								<li>
+									<a href="#">SubsubMenu2</a>
+								</li>
+								<li>
+									<a href="#">SubsubMenu3</a>
+								</li>
+								<li>
+									<a href="#">SubsubMenu4</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Pag-3</a>
+				</li>
+			</ul>
+		</div>
+    </body>
+</html>

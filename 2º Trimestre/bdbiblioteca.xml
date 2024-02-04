@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bdbiblioteca SYSTEM "./bdbiblioteca.dtd">
+
+<bdbiblioteca>
+  <socio dni="dni11.111.111-A">
+         <nombre>Juan Orozco García</nombre>
+         <direccion cp="11650" poblacion="">
+                <lugar>
+                         <Avda>San Jerónimo</Avda>
+                 </lugar>
+                 <numero>14</numero>
+                 <bloque>3B</bloque>
+                 <piso>2</piso>
+                 <puerta>A</puerta>
+         </direccion>
+         <tlf>956136100</tlf>
+         <tlf>656444888</tlf>
+          <fechanac dia="6" mes="Diciembre" año="1980"/>
+     </socio>
+     <socio dni="dni22.222.222-B">
+            <nombre>María Sánchez Figueroa</nombre>
+            <direccion cp="11650" poblacion="Arcos de la Fra.">
+                    <lugar>
+                           <Plaza>Duque de Ahumada</Plaza>
+                    </lugar>
+                     <numero>46</numero>
+            </direccion> 
+            <fechanac dia="1" mes="Febrero" año="1974"/>
+       </socio>
+       <libro isbn="isbn84-415-1812-2" tematica="Ciencias">
+                <titulo>XML Imprescindible</titulo>
+                <autor>Rysty Harold</autor>
+                 <fechadq dia="22" mes="Junio" año="2011"/>
+       </libro>
+</bdbiblioteca>

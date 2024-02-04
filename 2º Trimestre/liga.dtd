@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DEFINICION DE ENTIDADES-->
+<!ENTITY % categoriaFutbol "(Primera_Division|Segunda_Division|Tercera_Division)">
+<!ENTITY % posicion "(Portero|Defensa|Delantero|Centro|Lateral)">
+<!ENTITY % dia "(01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31)">
+<!ENTITY % mes "(Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|Octubre|Noviembre|Diciembre)">
+<!ENTITY % lugar "(Española|Extranjera)">
+<!ENTITY % competicion "Española 2021/2022">
+<!ENTITY % emision "(Abierto|Codificado)">
+
+<!-- DECLARACION LIGA -->
+<!--DATOS: juadores, entrenadores, arbitros, equipos, partidos, estadios, jornadas) -->
+<!ELEMENT ligas (liga+)>
+
+<!ELEMENT liga (jugadores+,entrenadores+,arbitros+,estadios+,equipos+,partidos+,jornadas+)>
+<!ATTLIST liga temporada CDATA "2011/2012">
+<!ATTLIST liga categoriaFutbol %categoriaFutbol; "Primera_Division" >
+
+<!-- JUGADORES -->
+<!ELEMENT jugadores (jugador+)>
+<!ELEMENT jugador (nombre,apellidos+,fechanacimiento,alias+,nacionalidad,demarcacion)>
+<!ATTLIST jugador id_jugador ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT fechanacimiento EMPTY>
+<!ATTLIST fechanacimiento dia %dia; #REQUIRED>
+<!ATTLIST fechanacimiento mes %mes; #REQUIRED>
+<!ATTLIST fechanacimiento ano CDATA #REQUIRED>
+<!ELEMENT alias (#PCDATA)>
+<!ELEMENT nacionalidad EMPTY>
+<!ATTLIST nacionalidad lugar %lugar; "Española">
+<!ELEMENT demarcacion EMPTY>
+<!ATTLIST demarcacion posicion %posicion; #REQUIRED>
+
+<!-- ENTRENADORES -->
+<!ELEMENT entrenadores (entrenador+)>
+<!ELEMENT entrenador (nombre,apellidos+,fechanacimiento,alias+,nacionalidad,titulos)>
+<!ATTLIST entrenador id_entrenador ID #REQUIRED>
+<!ELEMENT titulos (#PCDATA)>
+
+<!-- ARBITROS -->
+<!ELEMENT arbitros (arbitro+)>
+<!ELEMENT arbitro (nombre,apellidos+,alias+,nacionalidad)>
+<!ATTLIST arbitro id_arbitro ID #REQUIRED>
+
+<!-- ESTADIOS -->
+<!ELEMENT estadios (estadio+)>
+<!ELEMENT estadio (nombre, ubicacion, aforo)>
+<!ATTLIST estadio id_estadio ID #REQUIRED>
+<!ELEMENT ubicacion (#PCDATA)>
+<!ELEMENT aforo (#PCDATA)>
+
+<!-- EQUIPOS -->
+<!ELEMENT equipos (equipo+)>
+<!ELEMENT equipo (nombre, fechadeconstitucion, categoria,entrenador_equi,jugadores_equi+, estadio_equi)>
+<!ATTLIST equipo id_equipo ID #REQUIRED>
+<!ELEMENT fechadeconstitucion EMPTY>
+<!ATTLIST fechadeconstitucion dia %dia; #REQUIRED>
+<!ATTLIST fechadeconstitucion mes %mes; #REQUIRED>
+<!ATTLIST fechadeconstitucion ano CDATA #REQUIRED>
+<!ELEMENT categoria (#PCDATA)>
+<!ATTLIST categoria categoriaFutbol %categoriaFutbol; "Primera_Division" >
+<!ELEMENT entrenador_equi (#PCDATA)>
+<!ATTLIST entrenador_equi id_entrenador IDREF #REQUIRED>
+<!ELEMENT jugadores_equi (jugador_equi+)>
+<!ELEMENT jugador_equi (#PCDATA)>
+<!ATTLIST jugador_equi id_jugador IDREF #REQUIRED>
+<!ELEMENT estadio_equi (#PCDATA)>
+<!ATTLIST estadio_equi id_estadio IDREF #REQUIRED>
+
+<!-- PARTIDOS -->
+<!ELEMENT partidos (partido+)>
+<!ELEMENT partido (equipos_par+,estadio_par, arbitro_par)>
+<!ATTLIST partido id_partido ID #REQUIRED>
+<!ELEMENT equipos_par (equipo_par+)>
+<!ELEMENT equipo_par (#PCDATA)>
+<!ATTLIST equipo_par id_equipo IDREF #REQUIRED>
+<!ELEMENT estadio_par (#PCDATA)>
+<!ATTLIST estadio_par id_estadio IDREF #REQUIRED>
+<!ELEMENT arbitro_par (#PCDATA)>
+<!ATTLIST arbitro_par id_arbitro IDREF #REQUIRED>
+
+<!-- JORNADAS -->
+<!ELEMENT jornadas (jornada+)>
+<!ELEMENT jornada (fechadejornada+,competicion,partidos_jor+,emision+,canales+)>
+<!ATTLIST jornada id_jornada ID #REQUIRED>
+<!ELEMENT fechadejornada EMPTY>
+<!ATTLIST fechadejornada dia %dia; #REQUIRED>
+<!ATTLIST fechadejornada mes %mes; #REQUIRED>
+<!ATTLIST fechadejornada ano CDATA #REQUIRED>
+<!ELEMENT competicion (#PCDATA)>
+<!ATTLIST competicion nombre CDATA "Liga Española 2021/2022">
+<!ELEMENT partidos_jor (partido_jor+)>
+<!ELEMENT partido_jor (#PCDATA)>
+<!ATTLIST partido_jor id_partido IDREF #REQUIRED>
+<!ELEMENT emision EMPTY>
+<!ATTLIST emision nombre %emision; #REQUIRED>
+<!ELEMENT canales (#PCDATA)>

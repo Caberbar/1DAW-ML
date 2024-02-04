@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ligas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ligaFutbol.xsd">
+    <liga temporada="2011_2012" categoria="SegundaDivision">
+        <jugadores>
+            <jugador identificador="JUG_11111111P" demarcacion="Delantero">
+                <nombre>Lionel</nombre>
+                <apellido>Andrés</apellido>
+                <apellido>Messi</apellido>
+                <alias>La Pulga</alias>
+                <fechaNacimiento dia="24" mes="Junio" anno="1987"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_22222222P" demarcacion="Delantero">
+                <nombre>Cristiano Ronaldo</nombre>
+                <apellido>dos Santos</apellido>
+                <apellido>Aveiro</apellido>
+                <alias>CR7</alias>
+                <fechaNacimiento dia="5" mes="Febrero" anno="1985"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_33333333P" demarcacion="Delantero">
+                <nombre>Neymar da Silva</nombre>
+                <apellido>Santos</apellido>
+                <apellido>Júnior</apellido>
+                <alias>Neymar</alias>
+                <fechaNacimiento dia="1" mes="Enero" anno="1997"/>
+            </jugador>
+            <jugador identificador="JUG_44444444P" demarcacion="Delantero">
+                <nombre>Kylian</nombre>
+                <apellido>Mbappé</apellido>
+                <apellido>Lottin</apellido>
+                <alias>Donatello</alias>
+                <fechaNacimiento dia="5" mes="Enero" anno="1985"/>
+            </jugador>
+            <jugador identificador="JUG_55555555P" demarcacion="Portero">
+                <nombre>Kevin</nombre>
+                <apellido>De Bruyne</apellido>
+                <alias>The Prince</alias>
+                <fechaNacimiento dia="28" mes="Julio" anno="1991"/>
+            </jugador>
+            <jugador identificador="JUG_66666666P" demarcacion="Delantero">
+                <nombre>Sergio</nombre>
+                <apellido>Ramos</apellido>
+                <apellido>García</apellido>
+                <alias>Ramin</alias>
+                <fechaNacimiento dia="30" mes="Mayo" anno="1986"/>
+            </jugador>
+            <jugador identificador="JUG_77777777P" demarcacion="Defensa">
+                <nombre>Virgil </nombre>
+                <apellido>van Dijk</apellido>
+                <alias>Dijk</alias>
+                <fechaNacimiento dia="8" mes="Julio" anno="1991"/>
+            </jugador>
+            <jugador identificador="JUG_88888888P" demarcacion="Delantero">
+                <nombre>Robert</nombre>
+                <apellido>Lewandowski</apellido>
+                <alias>Lewandowski</alias>
+                <fechaNacimiento dia="21" mes="Julio" anno="1988"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_99999999P" demarcacion="Centro">
+                <nombre>Luka</nombre>
+                <apellido>Modrić</apellido>
+                <alias>Modrić</alias>
+                <fechaNacimiento dia="9" mes="Septiembre" anno="1985"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_10101010P" demarcacion="Centro">
+                <nombre>Sergio</nombre>
+                <apellido>Leonel</apellido>
+                <apellido>Agüero</apellido>
+                <alias>Agüero</alias>
+                <fechaNacimiento dia="2" mes="Julio" anno="1985"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_20202020P" demarcacion="Portero">
+                <nombre>Jan</nombre>
+                <apellido>Oblak</apellido>
+                <alias>Jan</alias>
+                <fechaNacimiento dia="7" mes="Junio" anno="1993"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_30303030P" demarcacion="Defensa">
+                <nombre>Kalidou</nombre>
+                <apellido>Koulibaly</apellido>
+                <alias>Koulibaly</alias>
+                <fechaNacimiento dia="20" mes="Junio" anno="1991"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_40404040P" demarcacion="Centro">
+                <nombre>Sergio</nombre>
+                <apellido>Busquets</apellido>
+                <apellido>Burgos</apellido>
+                <alias>Busquets</alias>
+                <fechaNacimiento dia="16" mes="Julio" anno="1991"/>
+                <nacionalidad tipo="Espanola"/>
+            </jugador>
+            <jugador identificador="JUG_50505050P" demarcacion="Centro">
+                <nombre>Bernardo</nombre>
+                <apellido>Silva</apellido>
+                <alias>El Pistolero</alias>
+                <fechaNacimiento dia="10" mes="Agosto" anno="1995"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_60606060P" demarcacion="Delantero">
+                <nombre>Paulo Bruno</nombre>
+                <apellido>Exequiel</apellido>
+                <apellido>Dybala</apellido>
+                <alias>La joya</alias>
+                <fechaNacimiento dia="15" mes="Noviembre" anno="1993"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_70707070P" demarcacion="Delantero">
+                <nombre>Raheem</nombre>
+                <apellido>Shaquilla</apellido>
+                <apellido>Sterling</apellido>
+                <alias>Shaquilla</alias>
+                <fechaNacimiento dia="8" mes="Diciembre" anno="1998"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_80808080P" demarcacion="Delantero">
+                <nombre>Sergio</nombre>
+                <apellido>Reguilón</apellido>
+                <apellido>Castillo</apellido>
+                <alias>Reguilón</alias>
+                <fechaNacimiento dia="5" mes="Diciembre" anno="1996"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_90909090P" demarcacion="Centro">
+                <nombre>Houssem</nombre>
+                <apellido>Aouar</apellido>
+                <alias>Aouar</alias>
+                <fechaNacimiento dia="30" mes="Julio" anno="1998"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_91919191P" demarcacion="Centro">
+                <nombre>Jadon</nombre>
+                <apellido>Malik</apellido>
+                <apellido>Sancho</apellido>
+                <alias>Jadon Malik</alias>
+                <fechaNacimiento dia="20" mes="Marzo" anno="2000"/>
+                <nacionalidad tipo="Extranjera"/>
+            </jugador>
+            <jugador identificador="JUG_92929292P" demarcacion="Defensa">
+                <nombre>Jose</nombre>
+                <apellido>Rodrigez</apellido>
+                <alias>Pepe</alias>
+                <fechaNacimiento dia="27" mes="Marzo" anno="1995"/>
+                <nacionalidad tipo="Espanola"/>
+            </jugador>
+        </jugadores>
+
+        <entrenadores>
+            <entrenador identificador="ENT_11111111P" titulos="4">
+                <nombre>Diego</nombre>
+                <apellido>Simeone</apellido>
+                <alias>Cholo</alias>
+                <fechaNacimiento dia="28" mes="Abril" anno="1970"/>
+                <nacionalidad tipo="Extranjera"/>
+            </entrenador>
+            <entrenador identificador="ENT_22222222P" titulos="7">
+                <nombre>Pep</nombre>
+                <apellido>Guardiola</apellido>
+                <alias>Guardiola</alias>
+                <fechaNacimiento dia="18" mes="Junio" anno="1971"/>
+                <nacionalidad tipo="Espanola" />
+            </entrenador>
+            <entrenador identificador="ENT_33333333P" titulos="10">
+                <nombre>Julen</nombre>
+                <apellido>Lopetegui</apellido>
+                <alias>Lopetegui</alias>
+                <fechaNacimiento dia="28" mes="Agosto" anno="1966"/>
+                <nacionalidad tipo="Espanola" />
+            </entrenador>
+            <entrenador identificador="ENT_44444444P" titulos="10">
+                <nombre>Quite</nombre>
+                <apellido>Setién</apellido>
+                <alias>Lopetegui</alias>
+                <fechaNacimiento dia="9" mes="Septiembre" anno="1958"/>
+            </entrenador>
+        </entrenadores>
+
+        <arbitros>
+            <arbitro identificador="ARB_11111111P">
+                <nombre>Alberto</nombre>
+                <apellido>Undiano</apellido>
+                <apellido>Mallenco</apellido>
+                <alias>El Niño de Oro</alias>
+            </arbitro>
+            <arbitro identificador="ARB_22222222P">
+                <nombre>David</nombre>
+                <apellido>Fernandez</apellido>
+                <apellido>Borbalan</apellido>
+                <alias>El Chiquitín</alias>
+            </arbitro>
+        </arbitros>
+
+        <estadios>
+            <estadio identificador="EST_111" ubicacion="Madrid" aforo="81044">
+                <nombre>Santiago Bernabéu</nombre>
+            </estadio>
+            <estadio identificador="EST_222" ubicacion="Barcelona" aforo="99354">
+                <nombre>Camp Nou</nombre>
+            </estadio>
+            <estadio identificador="EST_333" ubicacion="Madrid" aforo="68000">
+                <nombre>Wanda Metropolitano</nombre>
+            </estadio>
+            <estadio identificador="EST_444" ubicacion="Valencia" aforo="55000">
+                <nombre>Mestalla</nombre>
+            </estadio>
+        </estadios>
+
+        <equipos>
+            <equipo identificador="EQU_111" categoria="PrimeraDivision" entrenador="ENT_11111111P" estadio="EST_111">
+                <nombre>Real Madrid C.F.</nombre>
+                <fechaConstitucion dia="6" mes="Marzo" anno="1902" />
+                <jugadoresID>
+                    <jugadorID identicador="JUG_11111111P" />
+                    <jugadorID identicador="JUG_22222222P" />
+                    <jugadorID identicador="JUG_33333333P" />
+                    <jugadorID identicador="JUG_44444444P" />
+                    <jugadorID identicador="JUG_55555555P" />
+                </jugadoresID>
+            </equipo>
+            
+            <equipo identificador="EQU_222" categoria="PrimeraDivision" entrenador="ENT_22222222P" estadio="EST_222">
+                <nombre>F.C. Barcelona</nombre>
+                <fechaConstitucion dia="29" mes="Noviembre" anno="1999" />
+                <jugadoresID>
+                    <jugadorID identicador="JUG_66666666P" />
+                    <jugadorID identicador="JUG_77777777P" />
+                    <jugadorID identicador="JUG_88888888P" />
+                    <jugadorID identicador="JUG_99999999P" />
+                    <jugadorID identicador="JUG_10101010P" />
+                </jugadoresID>
+            </equipo>
+
+            <equipo identificador="EQU_333" categoria="PrimeraDivision" entrenador="ENT_33333333P" estadio="EST_333">
+                <nombre>Atletico Madrid C.F</nombre>
+                <fechaConstitucion dia="26" mes="Abril" anno="1903" />
+                <jugadoresID>
+                    <jugadorID identicador="JUG_20202020P" />
+                    <jugadorID identicador="JUG_30303030P" />
+                    <jugadorID identicador="JUG_40404040P" />
+                    <jugadorID identicador="JUG_50505050P" />
+                    <jugadorID identicador="JUG_60606060P" />
+                </jugadoresID>
+            </equipo>
+
+            <equipo identificador="EQU_444" categoria="PrimeraDivision" entrenador="ENT_44444444P" estadio="EST_444">
+                <nombre>Valencia C.F</nombre>
+                <fechaConstitucion dia="18" mes="Marzo" anno="1919" />
+                <jugadoresID>
+                    <jugadorID identicador="JUG_70707070P" />
+                    <jugadorID identicador="JUG_80808080P" />
+                    <jugadorID identicador="JUG_90909090P" />
+                    <jugadorID identicador="JUG_91919191P" />
+                    <jugadorID identicador="JUG_92929292P" />
+                </jugadoresID>
+            </equipo>
+        </equipos>
+
+        <partidos>
+            <partido identificador="PAR_111" estadio="EST_111" arbitro="ARB_11111111P">
+                <equiposID>
+                    <equipoID identificador="EQU_111" />
+                    <equipoID identificador="EQU_222" />
+                </equiposID>
+            </partido>
+
+            <partido identificador="PAR_222" estadio="EST_222" arbitro="ARB_22222222P">
+                <equiposID>
+                    <equipoID identificador="EQU_111" />
+                    <equipoID identificador="EQU_333" />
+                </equiposID>
+            </partido>
+
+            <partido identificador="PAR_333" estadio="EST_333" arbitro="ARB_11111111P">
+                <equiposID>
+                    <equipoID identificador="EQU_111" />
+                    <equipoID identificador="EQU_444" />
+                </equiposID>
+            </partido>
+
+            <partido identificador="PAR_444" estadio="EST_444" arbitro="ARB_22222222P">
+                <equiposID>
+                    <equipoID identificador="EQU_222" />
+                    <equipoID identificador="EQU_333" />
+                </equiposID>
+            </partido>
+
+            <partido identificador="PAR_555" estadio="EST_111" arbitro="ARB_11111111P">
+                <equiposID>
+                    <equipoID identificador="EQU_222" />
+                    <equipoID identificador="EQU_444" />
+                </equiposID>
+            </partido>
+
+            <partido identificador="PAR_666" estadio="EST_222" arbitro="ARB_22222222P">
+                <equiposID>
+                    <equipoID identificador="EQU_333" />
+                    <equipoID identificador="EQU_444" />
+                </equiposID>
+            </partido>
+        </partidos>
+
+        <jornadas>
+            <jornada identificador="JOR_111" competicion="2021_2022" emision="Codificado">
+                <fecha dia="23" mes="Marzo" anno="2023" />
+                <partidosJornada>
+                    <partidoID identificador="PAR_111" hora="16"/>
+                    <partidoID identificador="PAR_222" hora="18"/>
+                </partidosJornada>
+                <canales>
+                    <canal>LaLiga TV</canal>
+                    <canal>DAZN LaLiga</canal>
+                    <canal>Movistar LaLiga</canal>
+                </canales>
+            </jornada>
+
+            <jornada identificador="JOR_222" competicion="2021_2022" emision="Abierto">
+                <fecha dia="13" mes="Abril" anno="2023" />
+                <partidosJornada>
+                    <partidoID identificador="PAR_333" hora="12"/>
+                    <partidoID identificador="PAR_444" hora="14"/>
+                </partidosJornada>
+                <canales>
+                    <canal>LaLiga TV</canal>
+                    <canal>DAZN LaLiga</canal>
+                </canales>
+            </jornada>
+
+            <jornada identificador="JOR_333" competicion="2021_2022" emision="Abierto">
+                <fecha dia="23" mes="Marzo" anno="2023" />
+                <partidosJornada>
+                    <partidoID identificador="PAR_555" hora="20"/>
+                    <partidoID identificador="PAR_666" hora="22"/>
+                </partidosJornada>
+                <canales>
+                    <canal>LaLiga TV</canal>
+                    <canal>DAZN LaLiga</canal>
+                </canales>
+            </jornada>
+        </jornadas>
+    </liga>
+</ligas>

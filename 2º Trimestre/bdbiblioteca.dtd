@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT bdbiblioteca (socio+,libro)>
+
+<!ELEMENT socio (nombre,direccion,tlf*,fechanac)>
+<!ATTLIST socio dni ID #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (lugar,numero,bloque?,piso?,puerta?)>
+<!ATTLIST direccion cp CDATA #REQUIRED>
+<!ATTLIST direccion poblacion CDATA #REQUIRED>
+
+<!ELEMENT lugar (Avda?,Plaza?)>
+<!ELEMENT Avda (#PCDATA)>
+<!ELEMENT Plaza (#PCDATA)>
+
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT bloque (#PCDATA)>
+<!ELEMENT piso (#PCDATA)>
+<!ELEMENT puerta (#PCDATA)>
+
+<!ELEMENT tlf (#PCDATA)>
+
+<!ELEMENT fechanac EMPTY>
+<!ATTLIST fechanac dia CDATA #REQUIRED>
+<!ATTLIST fechanac mes CDATA #REQUIRED>
+<!ATTLIST fechanac año CDATA #REQUIRED>
+
+
+
+<!ELEMENT libro (titulo,autor,fechadq)>
+<!ATTLIST libro isbn CDATA #REQUIRED>
+<!ATTLIST libro tematica CDATA #REQUIRED>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+
+<!ELEMENT fechadq EMPTY>
+<!ATTLIST fechadq dia CDATA #REQUIRED>
+<!ATTLIST fechadq mes CDATA #REQUIRED>
+<!ATTLIST fechadq año CDATA #REQUIRED>
