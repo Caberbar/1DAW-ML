@@ -32,7 +32,7 @@ This repository is dedicated to the Markup Language subject of the Higher Degree
 - XML
 - XSLT
 
-##Contact
+## Contact
 
 For any questions or comments, feel free to get in touch:
 
