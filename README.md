@@ -36,7 +36,7 @@ This repository is dedicated to the Markup Language subject of the Higher Degree
 
 For any questions or comments, feel free to get in touch:
 
--Carlos Bernal
+- Carlos Bernal
 - <a href="mailto:carlos.bernal.barrionuevo@gmail.com">carlos.bernal.barrionuevo@gmail.com</a>
 - [Caberbar.com](http://Caberbar.com)
 
